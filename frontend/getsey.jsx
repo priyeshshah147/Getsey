@@ -3,19 +3,7 @@ import ReactDOM from "react-dom";
 import Root from './component/root';
 import configureStore from './store/store'
 
-// document.addEventListener('DOMContentLoaded',()=>{
-//     let root = document.getElementById('root');
-//     let preloadedState = undefined;
-//     if (window.currentUser) {
-//       preloadedState = {
-//         session: {
-//           currentUser: window.currentUser
-//         }
-//       };
-//     }
-//     const store = configureStore(preloadedState)
-//     ReactDOM.render(<Root store={store}/>,root);
-// })
+
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -31,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       store = configureStore();
     }
+
+    // window.currentUser = this.currentUser;
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
   });
