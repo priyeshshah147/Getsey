@@ -10,6 +10,7 @@ const display = currentUser ? (
   ) : (
     <div>
       <Link className="btn" to="/signup">Sign Up</Link>
+      <br></br>
       <Link className="btn" to="/login">Log In</Link>
     </div>
   );

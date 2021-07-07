@@ -22,10 +22,10 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
   )} />
 );
 
-const mDTP = state => (
+const mSTP = state => (
   {loggedIn: Boolean(state.session.id)}
 );
 
-export const AuthRoute = withRouter(connect(mDTP)(Auth));
+export const AuthRoute = withRouter(connect(mSTP)(Auth));
 
-export const ProtectedRoute = withRouter(connect(mDTP)(Protected));
+export const ProtectedRoute = withRouter(connect(mSTP)(Protected));

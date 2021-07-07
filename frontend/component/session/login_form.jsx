@@ -4,10 +4,11 @@ class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
+      username: '',
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
   }
 
   update(field) {
@@ -34,19 +35,29 @@ class LoginForm extends React.Component {
     );
   }
 
+  componentWillUnmount() {
+    return(this.props.deleteErrors())
+ }
+
+
+
+  demoUser(){
+    const user = { username: "hello9", password: "hello9" }
+    this.props.processForm(user)
+  }
+
   render() {
     return (
 
       <div className="login-form-container">
-          {this.props.formType}
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br/>
           <div className="login-form">
             <br/>
-            <label>Email:
+            <label>Username:
               <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
+                value={this.state.username}
+                onChange={this.update('username')}
                 className="login-input"
               />
             </label>
@@ -63,6 +74,7 @@ class LoginForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
+        <button className="demo-user-button" onClick={this.demoUser}>Demo User</button>
       </div>
     );
   }
