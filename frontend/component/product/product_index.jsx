@@ -13,6 +13,7 @@ class ProductIndex extends React.Component {
             <div>
                 <ul className="product-list">
                     {
+                        
                         products.map(product => (
                             <ProductIndexItem
                                 product={product}
