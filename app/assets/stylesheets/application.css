@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ /* reset */
+@import "./base/reset.scss";
+@import './component/modals.scss';

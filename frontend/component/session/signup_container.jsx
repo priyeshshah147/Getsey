@@ -15,7 +15,13 @@ const mSTP = ({ errors }) => {
   const mDTP = dispatch => {
     return {
       processForm: (user) => dispatch(signup(user)),
-      deleteErrors :() => dispatch(removeErrors())
+      deleteErrors :() => dispatch(removeErrors()),
+      otherForm:(
+        <button onClick={() => dispatch(openModal('signup'))}>
+            Signup
+        </button>
+      ),
+      closeModal: () => dispatch(closeModal())
     };
   };
   
