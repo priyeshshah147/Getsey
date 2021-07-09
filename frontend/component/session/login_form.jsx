@@ -45,17 +45,19 @@ class LoginForm extends React.Component {
 
   demoUser(){
     const user = { username: "hello9", password: "hello9" }
-    this.props.processForm(user)
+    this.props.processForm(user).then(this.props.closeModal)
   }
 
   render() {
     return (
-
+      <div>
+        {this.props.otherFrom}
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br/>
           <div className="login-form">
             <br/>
+            {/* <div> <button onClick={()=>this.props.openModal('signup')}>Signup</button></div> */}
             <label>Username:
               <input type="text"
                 value={this.state.username}
@@ -77,6 +79,7 @@ class LoginForm extends React.Component {
           </div>
         </form>
         <button className="demo-user-button" onClick={this.demoUser}>Demo User</button>
+      </div>
       </div>
     );
   }

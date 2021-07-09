@@ -4,14 +4,43 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(228, 37, 37, 0.7);
+    background: rgba(0,0,0, 0.7);
     z-index: 10;
   }
   
   .modal-child {
+    box-sizing: border-box;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rosybrown;
+    padding: 30px;
+    background-color:white;
+    border-radius: 24px;
+    box-shadow: 0 6px 36px 22223b;
+    width: 350px;
+  }
+
+  .session-submit{
+      text-align: center;
+      vertical-align: middle;
+      font-weight: 200;
+
+
+  }
+
+  .demo-user-button{
+    text-align: center;
+    font-weight: 200;
+    display: block;
+    border-radius: 24px;
+    background-color: inherit;
+    font: white;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 21px;
+    padding-left: 21px;
+    font-size: 1
+
   }

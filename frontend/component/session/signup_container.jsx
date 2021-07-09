@@ -2,7 +2,9 @@ import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {signup, removeErrors} from '../../actions/session_actions';
-import SignUpForm from './signup_form'
+import SignUpForm from './signup_form';
+import { openModal, closeModal } from '../../actions/modal_actions';
+
 
 const mSTP = ({ errors }) => {
     return {
@@ -17,8 +19,8 @@ const mSTP = ({ errors }) => {
       processForm: (user) => dispatch(signup(user)),
       deleteErrors :() => dispatch(removeErrors()),
       otherForm:(
-        <button onClick={() => dispatch(openModal('signup'))}>
-            Signup
+        <button onClick={() => dispatch(openModal('login'))}>
+            Login
         </button>
       ),
       closeModal: () => dispatch(closeModal())

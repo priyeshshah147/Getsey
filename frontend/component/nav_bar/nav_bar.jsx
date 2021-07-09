@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-export default ({ currentUser, logout }) => {
+
+
+export default ({ currentUser, logout, openModal }) => {
+
 const display = currentUser ? (
     <div>
       <h3>Welcome {currentUser.username}!</h3>
@@ -9,9 +11,9 @@ const display = currentUser ? (
     </div>
   ) : (
     <div>
-      <Link className="btn" to="/signup">Sign Up</Link>
-      <br></br>
-      <Link className="btn" to="/login">Log In</Link>
+      {/* <button onClick={()=>openModal('signup')}>Signup</button>
+      <br></br> */}
+      <button className="login" onClick={()=>openModal('login')}>Log In</button>
     </div>
   );
   return (
@@ -19,7 +21,16 @@ const display = currentUser ? (
       <h1 className="logo">Getsey</h1>
       <div>
         {display}
-      </div>
+      </div>      
     </header>
   )
 }
+
+
+// sessionLinks = () => (
+//   <nav>
+//       <button className="log-button" onClick={() => this.props.openModal('login')}>Sign in</button>
+//       &nbsp;or&nbsp;
+//       <button className="log-button" onClick={() => this.props.openModal('signup')}>Sign up</button>
+//   </nav>
+// )

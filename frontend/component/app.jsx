@@ -14,12 +14,13 @@ export default () => (
     {/* <header>
       <Link to="/" className="header-link">
       </Link>
-      <GreetingContainer />
+      <GreetingContainer />a
       </header> */}
     <div>
         <Route path="/" component={NavBarContainer}/>
-        <AuthRoute exact path='/login' component={LoginContainer}/>
-        <AuthRoute exact path='/signup' component={SignupContainer}/>
+        {/* <AuthRoute exact path='/login' component={LoginContainer}/>
+        <AuthRoute exact path='/signup' component={SignupContainer}/> */}
+        
         
     </div>
     </div>
