@@ -11,7 +11,7 @@ import ProductIndexContainer from './product/product_index_container';
 export default () => (
     <div>
         <Route path="/" component={NavBarContainer}/>
-        <Route path="/products" component={ProductIndexContainer}/>
+        <Route path="/" component={ProductIndexContainer}/>
         <AuthRoute exact path='/login' component={LoginContainer}/>
         <AuthRoute exact path='/signup' component={SignupContainer}/>
         
