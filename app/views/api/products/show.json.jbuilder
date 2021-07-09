@@ -3,3 +3,4 @@ json.extract! @product, :id, :product_name, :price, :seller_id, :description
 #     json.partial! "product", product: @product
 # end
 
+json.image url_for(product.photo)

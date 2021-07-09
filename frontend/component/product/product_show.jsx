@@ -9,10 +9,10 @@ class ProductShow extends React.Component {
        this.props.fetchProduct(this.props.match.params.productId)
    }
   render(){
-      
+      const {product} = this.props
       return(
           <div>
-
+              <img scr={product.image}/>
           </div>
       )
   }

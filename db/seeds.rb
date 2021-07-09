@@ -8,17 +8,39 @@
 Product.delete_all
 
 product1 = Product.create!(
-    product_name: 'Potato',
-    description: 'One a potato two a potato',
+    product_name: 'Superman',
+    description: 'I hate crypto-currency it puts me weak',
     category_id:1,
     price: 1,
     seller_id: 1
 )
 product2 = Product.create!(
-    product_name: 'Banana',
-    description: 'Minions favorite',
+    product_name: 'Jabulani',
+    description: 'Finest soccer ball',
     category_id:2,
     price: 2,
     seller_id: 2
 )
-# product2.photo.attach(io: URI.open("https://getsey-dev.s3.us-east-2.amazonaws.com/m5VUsQwFxmN7pkZTCnmk33sX"), filename: "1.jpg")
+product3 = Product.create!(
+    product_name: 'Beetle',
+    description: 'Classic metal toy car',
+    category_id:1,
+    price: 1,
+    seller_id: 1
+)
+product4 = Product.create!(
+    product_name: 'Dog toy',
+    description: 'tough rubber toy for dogs',
+    category_id:2,
+    price: 2,
+    seller_id: 2
+)
+product5 = Product.create!(
+    product_name: 'Robowheel',
+    description: 'Educative toys for young children',
+    category_id:1,
+    price: 1,
+    seller_id: 1
+)
+
+
