@@ -3,7 +3,11 @@ import ProductIndex from './product_index';
 import { fetchProducts} from '../../actions/product_actions';
 
 const mSTP =(state) => {
+<<<<<<< HEAD
     
+=======
+    debugger
+>>>>>>> product
     return{
         products: Object.values(state.entities.products)
     }

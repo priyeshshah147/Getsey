@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProductIndexItem = ({product}) => {
+<<<<<<< HEAD
     
+=======
+    debugger
+>>>>>>> product
     return(
         <div>
             <li>
