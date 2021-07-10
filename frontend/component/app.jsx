@@ -11,6 +11,7 @@ import Modal from './modal/modal';
 export default () => (
     <div>
     <Modal/>
+    
     {/* <header>
       <Link to="/" className="header-link">
       </Link>

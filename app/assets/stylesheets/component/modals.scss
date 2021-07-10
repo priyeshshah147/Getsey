@@ -4,7 +4,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0,0,0, 0.7);
+    background: rgba(34,34,34,0.65);
     z-index: 10;
   }
   
@@ -18,29 +18,83 @@
     background-color:white;
     border-radius: 24px;
     box-shadow: 0 6px 36px 22223b;
-    width: 350px;
+    width: 384px;
+    height: 450px
   }
 
-  .session-submit{
-      text-align: center;
-      vertical-align: middle;
-      font-weight: 200;
-
-
-  }
-
-  .demo-user-button{
+  .login-submit, .signup-submit{
     text-align: center;
-    font-weight: 200;
+    font-weight: bold;
     display: block;
     border-radius: 24px;
-    background-color: inherit;
-    font: white;
+    border-color: black;
+    background-color: black;
+    color:white ;
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 21px;
-    padding-left: 21px;
-    font-size: 1
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size:16px;
+    width: 322px;
+    height: 48px;
+    border:none;
+    
+
 
   }
+  .login-submit:hover, .signup-submit:hover{
+    // background-color: black;
+    border-color: black;
+    transform: scale(1.02);
+
+
+
+  }
+  .demo-user-button{
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    border-radius: 24px;
+    background-color: white;
+    font: white;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size:16px;
+    width: 324px;
+    height: 44px
+
+  }
+  .demo-user-button:hover{
+      border-color: black;
+      transform: scale(1.02);
+  }
+
+  .signup-input, .login-input{
+    height:46px;
+    width: 310px;
+    margin-bottom: 13px;
+    margin-top:3px;
+    border-radius: 7px;
+    box-shadow: rgba(255, 255, 255, 0.65);
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+
+  }
+
+
+.modal-heading{
+  font-size: 22px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.login-label, .signup-label{
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}

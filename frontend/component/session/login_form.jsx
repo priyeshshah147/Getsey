@@ -51,14 +51,14 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div>
-        {this.props.otherFrom}
+        
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br/>
           <div className="login-form">
+          <div ><label  className="modal-heading">Log in to continue</label></div>
             <br/>
-            {/* <div> <button onClick={()=>this.props.openModal('signup')}>Signup</button></div> */}
-            <label>Username:
+            <label className="login-label">Username:
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
@@ -66,7 +66,7 @@ class LoginForm extends React.Component {
               />
             </label>
             <br/>
-            <label>Password:
+            <label className="login-label">Password:
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
@@ -75,9 +75,10 @@ class LoginForm extends React.Component {
             </label>
             {this.renderErrors()}
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <input className="login-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
+        <br></br>
         <button className="demo-user-button" onClick={this.demoUser}>Demo User</button>
       </div>
       </div>
