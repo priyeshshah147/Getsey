@@ -13,13 +13,11 @@
  *= require_tree .
  *= require_self
  */
-<<<<<<< HEAD:app/assets/stylesheets/application.css
 
  /* reset */
-@import "./base/reset.scss";
-@import './component/modals.scss';
-=======
-.nav-bar {
+ @import "./base/reset.scss";
+ @import './component/modals.scss';
+
+ .nav-bar {
     background-color: red;
 }
->>>>>>> product:app/assets/stylesheets/application.scss
