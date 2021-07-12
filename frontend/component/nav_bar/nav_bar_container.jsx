@@ -5,7 +5,7 @@ import { logout, login } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 
 const mSTP = (state) => ({
-  currentUser: state.session.id
+  currentUser: state.entities.users[state.session.id]
 });
 
 const mDTP = (dispatch) => ({

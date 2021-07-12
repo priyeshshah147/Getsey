@@ -1,6 +1,6 @@
 class Product < ApplicationRecord 
     validates :product_name, :description, :category_id, :price, :seller_id, presence: true
-    validates :price,  numericality: { greater_than: 0}
+    validates :price, format: { with: /\A\d+(?:\.\d{2})?\z/ }, numericality: { greater_than: 0}
 
     has_one_attached :photo
 

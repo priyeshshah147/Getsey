@@ -11,9 +11,14 @@ class ProductShow extends React.Component {
   render(){
       const {product} = this.props
       return(
-          <div>
-              <img scr={product.image}/>
-          </div>
+         (product)? <div><img className="product-show" src={product.image}/>
+                        {product.price}    
+                    </div> : null
+            
+
+      
+          
+       
       )
   }
 }
