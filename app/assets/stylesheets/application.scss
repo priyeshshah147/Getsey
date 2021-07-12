@@ -19,11 +19,7 @@
  @import './component/modals.scss';
  @import './component/navbar.scss';
 
- .nav-bar {
-    background-color: white;
-    left:  100px;
-    right: 100px;
-}
+
 
 
 
@@ -53,6 +49,16 @@
 
 .index-photos{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+}
+
+.product-list{  
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 

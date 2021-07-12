@@ -6,27 +6,27 @@ export default ({ currentUser, logout, openModal }) => {
 
 const display = currentUser ? (
     <div>
-      <nav>
-      <h3>Welcome {currentUser.username}!</h3>
+      <nav className="arrange-button">
       <button className="logout-button-nav" onClick={logout}>Logout</button>
+      <h3 className="profile-name">{currentUser.username}</h3>
       </nav>
     </div>
   ) : (
-    <div>
-      <button className="Signup-button-nav" onClick={()=>openModal('signup')}>Signup</button>
+    <div className="arrange-button">
+      <button className="signup-button-nav" onClick={()=>openModal('signup')}>Signup</button>
       <br></br>
-      <button className="login" onClick={()=>openModal('login')}>Log In</button>
+      <button className="login-button-nav" onClick={()=>openModal('login')}>Log In</button>
     </div>
   );
   return (
     <header className="nav-bar">
       <Link to={'/'}>
         <div >
-        <img className="logo" src="https://getsey-seeds.s3.us-east-2.amazonaws.com/getsey.jpg"/>
+        <img className="logo" src="https://getsey-seeds.s3.us-east-2.amazonaws.com/getsey+logo.jpg"/>
         </div> 
       </Link>
       <div >
-          <input className="search-box" type="text"/>
+          <input className="search-box" placeholder="Search for anything" type="text"/>
         </div>
       <div>
         {display}
