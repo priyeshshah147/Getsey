@@ -12,10 +12,19 @@ class ProductShow extends React.Component {
   render(){
       const {product} = this.props
       return(
-         (product)? <div><ul><img className="product-show" src={product.image}/>
-                        <li>{product.price} </li>
-                       <li>{product.description} </li>
-                        </ul>
+         (product)? <div className="product-showpage">
+                        {/* <div className="product-display"> */}
+                            <img className="product-show-icon" src={product.image}/>
+                            <img className="product-show" src={product.image}/>
+                        {/* </div> */}
+                        <div className="product-details">
+                            <ul>
+                            <li className="product-name-show">{product.product_name}</li>
+                            <li className="product-description-show">{product.description}</li>
+                            <li className="product-price-show">${product.price}</li>
+                            </ul>
+                            
+                        </div>
                     </div> : null
             
 

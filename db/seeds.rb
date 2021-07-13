@@ -11,9 +11,9 @@ Product.delete_all
 User.delete_all
 
 user1 = User.create!(
-    username: 'store1',
-    email: 'store1@gmail.com',
-    password: 'store1'    
+    username: 'Demo',
+    email: 'demo@gmail.com',
+    password: 'password'    
 )
 
 user2 = User.create!(

@@ -15,17 +15,15 @@
  */
 
  /* reset */
- @import "./base/reset.scss";
- @import './component/modals.scss';
- @import './component/navbar.scss';
+//  @import "./base/reset.scss";
+//  @import './component/modals.scss';
+//  @import './component/navbar.scss';
 
 
 
 
 
-.product-show{
-    height: 500px;
-}
+
 
 .price-tag{
     font-size: 22px;
@@ -55,10 +53,37 @@
 
 .product-list{  
     position: absolute;
-    left: 10%;
-    right: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
+
+.product-show-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border: solid black;
+}
+
+.product-display{
+    display: flex;
+    align-items: top;
+    width: 55%;
+    
+}
+
+.product-details{
+    width: 25%;
+}
+
+.product-showpage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left:10%;
+    margin-right: 10%;
+    margin-top: 35px;
+}

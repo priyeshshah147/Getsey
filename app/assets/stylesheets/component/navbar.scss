@@ -12,10 +12,13 @@
 .nav-bar {
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-content: stretch;
     background-color: white;
     position: relative;
-    margin: 10px;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .logo {
@@ -25,9 +28,12 @@
 }
 
 .search-box{
+    display:flex;
     height:36px;
-    width: 800px;
+    min-width: 55vw;
     border-radius: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 20px;
@@ -58,8 +64,8 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    margin-left: 5px;
-    margin-right: 5px;
+    // margin-left: 5px;
+    // margin-right: 5px;
 }
 
 .profile-name{

@@ -14,13 +14,13 @@ export default () => (
     <div>
     <Modal/>
     
-    {/* <header>
-      <Link to="/" className="header-link">
-      </Link>
-      <GreetingContainer />a
-      </header> */}
+    <header>
+      {/* <Link to="/" className="header-link">
+      </Link> */}
+      <NavBarContainer />
+      </header>
     <div>
-        <Route path="/" component={NavBarContainer}/>
+        {/* <Route path="/" component={NavBarContainer}/> */}
         <Route exact path="/" component={ProductIndexContainer}/>
         <Route exact path="/products/:productId"component={ProductShowContainer}/>
         {/* <AuthRoute exact path='/login' component={LoginContainer}/>
