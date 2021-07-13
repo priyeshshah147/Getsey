@@ -22,13 +22,14 @@ class ProductShow extends React.Component {
                             <li className="product-name-show">{product.product_name}</li>
                             <li className="product-description-show">{product.description}</li>
                             <li className="product-price-show">${product.price}</li>
+                            <button className="cart-show">Add to cart</button>
                             </ul>
                             
                         </div>
                     </div> : null
             
 
-      
+    
           
        
       )

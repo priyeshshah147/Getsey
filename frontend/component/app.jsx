@@ -10,6 +10,7 @@ import ProductShowContainer from "./product/product_show_container"
 
 
 
+
 export default () => (
     <div>
     <Modal/>
@@ -18,6 +19,7 @@ export default () => (
       {/* <Link to="/" className="header-link">
       </Link> */}
       <NavBarContainer />
+      
       </header>
     <div>
         {/* <Route path="/" component={NavBarContainer}/> */}

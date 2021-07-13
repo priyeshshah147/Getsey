@@ -17,8 +17,8 @@
     background-color: white;
     position: relative;
     margin-top: 10px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .logo {
@@ -30,7 +30,7 @@
 .search-box{
     display:flex;
     height:36px;
-    min-width: 55vw;
+    min-width: 48vw;
     border-radius: 40px;
     margin-left: 5px;
     margin-right: 5px;
@@ -64,12 +64,85 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    // margin-left: 5px;
-    // margin-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .profile-name{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     font-weight: bold;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top:10px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.category-button{
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    text-decoration: none;
+    font-weight: 400;
+   
+    transition: all .35s ease;
+
+    &::before {
+        content: ""; 
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s; 
+        transition: all 0.3s ease-in-out 0s; 
+    }   
+
+    &:hover {
+        color:black;
+
+        &::before {
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }   
+    }   
+
+}
+
+.search-button {
+    color: black;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: -40px;
+}
+
+.merger{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+
+.cart {
+    color: black;
+    background: transparent;
+    border: none;
+    outline: none;
 }

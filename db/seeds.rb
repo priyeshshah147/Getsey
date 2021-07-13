@@ -40,58 +40,58 @@ user5 = User.create!(
 
 
 product1 = Product.create!(
-    product_name: 'Superman',
-    description: 'I hate crypto-currency it puts me weak',
+    product_name: 'Schaffhausen',
+    description: 'SCHAFFHAUSEN, Watch, mens watch, mechanical wristWatch, modern watch, Swiss made, gift for men',
     category_id:1,
-    price: 10.00,
+    price: 299.99,
     seller_id: 1
 )
-product1.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/action2.jpg"), filename: "1.jpg")
+product1.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch.jpg"), filename: "1.jpg")
 
 product2 = Product.create!(
-    product_name: 'Jabulani',
-    description: 'Finest soccer ball',
-    category_id:2,
-    price: 12.20,
+    product_name: 'Custom Watch',
+    description: 'Personalized Custom Watch Groomsmen Watch Father Of The Groom Best Man Gift Ideas Engraved Metal Watch Usher Gift Wedding Party Gift',
+    category_id:1,
+    price: 50.50,
     seller_id: 2
 )
-product2.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/ball1.jpg"), filename: "2.jpg")
+product2.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch1.jpg"), filename: "2.jpg")
 
 product3 = Product.create!(
-    product_name: 'Beetle',
-    description: 'Classic metal toy car',
+    product_name: 'Mi Band',
+    description: 'Xiaomi Watch Strap - Mi band 6,5,4,3 Strap Nylon Sport loop watch Belt Pulsera correa Miband - Hyper Grape',
     category_id:1,
-    price: 5.50,
+    price: 45.99,
     seller_id: 1
 )
-product3.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/beetle.jpg"), filename: "3.jpg")
+product3.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch2.jpg"), filename: "3.jpg")
 
 product4 = Product.create!(
-    product_name: 'Dog toy',
-    description: 'tough rubber toy for dogs',
-    category_id:2,
-    price: 7.00,
-    seller_id: 2
+    product_name: 'Tissot',
+    description: 'Tissot Chronograph mens watch stainless steel swiss watch',
+    category_id:1,
+    price: 149.99,
+    seller_id: 1
 )
-product4.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/dogt3.jpg"), filename: "4.jpg")
+product4.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch3.jpg"), filename: "4.jpg")
 
 product5 = Product.create!(
-    product_name: 'Robowheel',
-    description: 'Educative toys for young children',
+    product_name: 'Omega',
+    description: 'Omega vintage Tiffany & Co. Gold Plated mens 1950 Automatic Bumper Caliber 342 watch',
     category_id:1,
-    price: 31.50,
+    price: 131.50,
     seller_id: 3
 )
-product5.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/robo1.jpg"), filename: "4.jpg")
+product5.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch4.jpg"), filename: "5.jpg")
 
 product6 = Product.create!(
-    product_name: 'beanie',
-    description: 'Cosy and warm for cold winters',
+    product_name: 'DW',
+    description: 'Daniel Wellington Classy Brown & Silver Toned Wristwatch w/ Adjustable Band',
     category_id:1,
     price: 7.50,
     seller_id: 5
 )
-product6.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/beanie3.jpg"), filename: "6.jpg")
+product6.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch5.jpg"), filename: "6.jpg")
 
 product7 = Product.create!(
     product_name: 'Earing',
@@ -100,7 +100,7 @@ product7 = Product.create!(
     price: 25.99,
     seller_id: 5
 )
-product7.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/ear1.jpg"), filename: "7.jpg")
+product7.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet1.jpg"), filename: "7.jpg")
 
 product8 = Product.create!(
     product_name: 'Sunglasses',
@@ -109,7 +109,7 @@ product8 = Product.create!(
     price: 159.99,
     seller_id: 5
 )
-product8.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/glass1.jpg"), filename: "8.jpg")
+product8.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet2.jpg"), filename: "8.jpg")
 
 product9 = Product.create!(
     product_name: 'hat',
@@ -118,7 +118,7 @@ product9 = Product.create!(
     price: 15.60,
     seller_id: 5
 )
-product9.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/hat1.jpg"), filename: "9.jpg")
+product9.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet3.jpg"), filename: "9.jpg")
 
 product10 = Product.create!(
     product_name: 'Beats by Dr Dre',
@@ -127,7 +127,7 @@ product10 = Product.create!(
     price: 200.00,
     seller_id: 5
 )
-product10.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/headphone3.jpg"), filename: "10.jpg")
+product10.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet4.jpg"), filename: "10.jpg")
 
 product11 = Product.create!(
     product_name: 'Black Heels',
@@ -136,7 +136,7 @@ product11 = Product.create!(
     price: 15.60,
     seller_id: 5
 )
-product11.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/heel1.jpg"), filename: "11.jpg")
+product11.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet5.jpg"), filename: "11.jpg")
 
 
 product12 = Product.create!(
@@ -146,14 +146,14 @@ product12 = Product.create!(
     price: 100.51,
     seller_id: 5
 )
-product12.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/suit2.jpg"), filename: "12.jpg")
+product12.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet6.jpg"), filename: "12.jpg")
 
-product13 = Product.create!(
-    product_name: 'Wallet',
-    description: 'Sleek design for all your cards',
-    category_id:2,
-    price: 59.99,
-    seller_id: 5
-)
-product13.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/wallet4.jpg"), filename: "1.jpg")
+# product13 = Product.create!(
+#     product_name: 'Wallet',
+#     description: 'Sleek design for all your cards',
+#     category_id:2,
+#     price: 59.99,
+#     seller_id: 5
+# )
+# product13.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/wallet4.jpg"), filename: "1.jpg")
 
