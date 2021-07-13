@@ -43,9 +43,7 @@
     // background-color: black;
     border-color: black;
     transform: scale(1.02);
-
-
-
+    cursor:pointer;
   }
   .demo-user-button{
     text-align: center;
@@ -67,6 +65,7 @@
   .demo-user-button:hover{
       border-color: black;
       transform: scale(1.02);
+      cursor: pointer;
   }
 
   .signup-input, .login-input{

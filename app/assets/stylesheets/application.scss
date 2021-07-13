@@ -33,16 +33,16 @@
 }
 
 .photo-disp {
-    height:180px;
+    height:170px;
     width: 200px;
 }
 
 .photo-disp:hover {
-    height:180px;
+    height:170px;
     width: 200px;
-    -moz-box-shadow: 0 0 10px #ccc;
-    -webkit-box-shadow: 0 0 10px #ccc;
-    box-shadow: 0 0 10px #ccc;
+    -moz-box-shadow: 0 0 20px #ccc;
+    -webkit-box-shadow: 0 0 20px #ccc;
+    box-shadow: 0 0 20px #ccc;
 }
 
 .couple-product-price{
@@ -51,7 +51,7 @@
     align-items: left;
     // align-content: center;
     margin-bottom: 25px;
-
+    margin-top: 10px;
 }
 
 .index-photos{
