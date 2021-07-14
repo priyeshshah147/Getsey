@@ -6,17 +6,17 @@ export const fetchProducts = () => (
 )
 
 export const fetchProduct = (productId) => {
-    
     return $.ajax({
         url:`/api/products/${productId}`, 
         method: 'GET'
     })
 }
 
-export const createProduct = (product) => (
-    $.ajax({
-        url:`/api/products/`, 
-        method: 'POST', 
-        data: {product}
-    })
-)
+// export const createProduct = (product) => (
+//     $.ajax({
+//         url:`/api/products/`, 
+//         method: 'POST', 
+//         data: {product}
+//     })
+// )
+
