@@ -4,9 +4,10 @@ export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
 export const RECEIVE_PRODUCT_ERRORS = 'RECEIVE_PRODUCT_ERRORS';
 
-export const receiveProduct = (product) => ({
+export const receiveProduct = ({product, reviews}) => ({
     type: RECEIVE_PRODUCT, 
-    product
+    product,
+    reviews,
 })
 
 export const receiveProducts = (products) => ({

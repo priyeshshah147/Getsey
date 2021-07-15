@@ -6,16 +6,17 @@ export const REMOVE_REVIEW = "REMOVE_REVIEW";
 export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
 
 
-const receiveReviews = (reviews) => ({
+const receiveReviews = ({reviews, users}) => ({
     type: RECEIVE_REVIEWS, 
-    reviews
+    reviews,
+    users
 })
 
-const receiveReview = ({review, reviewer, avgRating}) => ({
+const receiveReview = ({review, reviewer}) => ({
     type: RECEIVE_REVIEW,
     review,
     reviewer, 
-    avgRating
+   
 })
 
 const removeReview = (reviewId) => ({
@@ -28,8 +29,8 @@ const receiveReviewErrors = (errors) => ({
     errors
 })
 
-export const fetchReviews = () => (dispatch) => (
-    ReviewApiUtil.fetchReviews()
+export const fetchReviews = (productId) => (dispatch) => (
+    ReviewApiUtil.fetchReviews(productId)
     .then((reviews) =>dispatch(receiveReviews(reviews)))
 );
 

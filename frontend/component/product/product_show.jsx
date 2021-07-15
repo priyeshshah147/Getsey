@@ -1,4 +1,6 @@
 import React from 'react';
+import ReviewForm from '../review/review';
+import ReviewContainer from '../review/review_container';
 
 class ProductShow extends React.Component {
    constructor(props){
@@ -7,7 +9,9 @@ class ProductShow extends React.Component {
    }
    componentDidMount(){
        
-       this.props.fetchProduct(this.props.match.params.productId)
+       this.props.fetchProduct(this.props.match.params.productId),
+       this.props.fetchReviews(this.props.match.params.productId)
+
    }
   render(){
       const {product} = this.props
@@ -24,8 +28,9 @@ class ProductShow extends React.Component {
                             <li className="product-price-show">${product.price}</li>
                             <button className="cart-show">Add to cart</button>
                             </ul>
-                            
+                               
                         </div>
+                        <ReviewContainer product={product}/>
                     </div> : null
             
 

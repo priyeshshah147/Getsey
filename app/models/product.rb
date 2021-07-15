@@ -8,4 +8,8 @@ class Product < ApplicationRecord
     foreign_key: :product_id, 
     class_name: :Review
 
+    def average_rating
+        reviews.average(:rating)
+    end
+
 end

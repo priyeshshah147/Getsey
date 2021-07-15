@@ -1,19 +1,23 @@
 class Api::ReviewsController < ApplicationController
     before_action :require_login, only: [:create, :destroy, :update]
     def create
-        @review = current_user.reviews.new(review_params)
+        @review = Review.new(review_params)
 
         if @review.save
             render :show
         else
-            render json: ["comment can not be blank. Please try again."], status: 422
+            render json: @review.error.full_messages, status: 404
         end
     end
 
-    # def index
-    #     @reviews = Review.all
-    #     render `/api/reviews/_review`
-    # end
+  
+
+    def index 
+        
+        @reviews = Review.includes(:reviewer).find_by_product_id(params[:product_id])
+        render :index
+    end
+
 
     # def show
     #     @review = Review.find_by(id: params[:id])
@@ -37,7 +41,7 @@ class Api::ReviewsController < ApplicationController
     def destroy
         @review = current_user.reviews.find_by(id: params[:id])
         if @review
-            @review.delete
+            @review.destroy
             render :show
         else
             render json: @review.errors.full_messages, status:422

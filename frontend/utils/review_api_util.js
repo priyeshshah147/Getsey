@@ -1,20 +1,20 @@
-export const fetchReviews = () => (
+export const fetchReviews = (product_id) => (
     $.ajax({
         method: 'GET',
-        url: `/api/reviews`
+        url: `/api/products/${product_id}/reviews`
     })
 )
 
-export const fetchReview = (reviewId) => (
-    $.ajax({
-        method: 'GET', 
-        url: `/api/reviews/${reviewId}`
-    })
-)
+// export const fetchReview = (reviewId) => (
+//     $.ajax({
+//         method: 'GET', 
+//         url: `/api/reviews/${reviewId}`
+//     })
+// )
 export const createReview = review => (
     $.ajax({
         method:'POST', 
-        url: `/api/reviews`, 
+        url: `/api/products/${review.product_id}/reviews`, 
         data: {review}
     })
 )

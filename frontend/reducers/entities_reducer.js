@@ -2,10 +2,10 @@ import { combineReducers } from 'redux';
 
 import usersReducer from './users_reducer';
 import productReducer from './product_reducer';
-import reviewErrorReducer from './review_error_reducers';
+import reviewReducer from './reviews_reducer';
 
 export default combineReducers({
   users: usersReducer,
   products: productReducer,
-  reviewErrorReducer
+  reviews: reviewReducer
 });
