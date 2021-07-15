@@ -2,7 +2,7 @@ import React from 'react';
 // import { withRouter} from 'react-router-dom';
 // import StarRatingComponent from 'react-star-rating-component'
 
-class ReviewForm extends React.Component {
+class ReviewIndex extends React.Component {
 
     constructor (props){
         super(props)
@@ -22,7 +22,9 @@ class ReviewForm extends React.Component {
                {
 
                    productReviews.map(review => (
-                       <p>{review.comment}</p>
+                       
+                       <p>{this.props.username},Rating:{review.rating},{review.comment}</p>
+                       
                    ))
                }
             </div>
@@ -32,4 +34,4 @@ class ReviewForm extends React.Component {
 
 }
 
-export default ReviewForm;
+export default ReviewIndex;

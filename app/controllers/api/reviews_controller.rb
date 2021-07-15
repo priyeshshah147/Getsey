@@ -1,12 +1,18 @@
 class Api::ReviewsController < ApplicationController
-    before_action :require_login, only: [:create, :destroy, :update]
+    before_action :require_logged_in!, only: [:create, :destroy, :update]
     def create
-        @review = Review.new(review_params)
+        # debugger
+        @user = current_user
+        @review = Review.new(product_id:params[:review][:product_id], 
+        comment:params[:review][:comment], 
+        rating: params[:review][:rating],
+        reviewer_id: current_user.id
+        )
 
         if @review.save
             render :show
         else
-            render json: @review.error.full_messages, status: 404
+            render json: @review.errors.full_messages, status: 404
         end
     end
 
@@ -15,6 +21,7 @@ class Api::ReviewsController < ApplicationController
     def index 
         
         @reviews = Review.includes(:reviewer).find_by_product_id(params[:product_id])
+        debugger
         render :index
     end
 

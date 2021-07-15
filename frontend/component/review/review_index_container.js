@@ -1,9 +1,10 @@
 import {connect} from 'react-redux';
 import { fetchReviews } from '../../actions/review_actions';
-import ReviewForm from './review'
+import { createReview } from '../../utils/review_api_util';
+import ReviewIndex from './review_index'
 
 const mSTP = state => {
-    debugger
+    // debugger
     return{
     reviews: Object.values(state.entities.reviews)
     }
@@ -12,6 +13,7 @@ const mSTP = state => {
 const mDTP = dispatch => ({
     fetchReviews: (productId) => dispatch(fetchReviews(productId)),
 
+
 })
 
-export default connect(mSTP, mDTP)(ReviewForm);
+export default connect(mSTP, mDTP)(ReviewIndex);

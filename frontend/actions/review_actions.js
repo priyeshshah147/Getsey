@@ -34,22 +34,27 @@ export const fetchReviews = (productId) => (dispatch) => (
     .then((reviews) =>dispatch(receiveReviews(reviews)))
 );
 
+// export const fetchReview = (productId) => (dispatch) => (
+//     ReviewApiUtil.fetchReview(productId)
+//     .then((reviews) =>dispatch(receiveReviews(reviews)))
+// );
+
 
 export const createReview = (review) => dispatch => (
     ReviewApiUtil.createReview(review)
     .then(review => dispatch(receiveReview(review)),
-    (err) => dispatch(receiveReviewErrors(err.responseJson)))
+    (err) => dispatch(receiveReviewErrors(err.responseJSON)))
 );
 
 export const updateReview = (review) => dispatch => (
     ReviewApiUtil.updateReview(review)
     .then(review => dispatch(receiveReview(review)),
-    (err) => dispatch(receiveReviewErrors(err.responseJson)))
+    (err) => dispatch(receiveReviewErrors(err.responseJSON)))
 );
 
 export const deleteReview = (reviewId) => dispatch => (
     ReviewApiUtil.deleteReview(reviewId)
     .then(() => dispatch(removeReview(reviewId)),
-    (err) => dispatch(receiveReviewErrors(err.responseJson)))
+    (err) => dispatch(receiveReviewErrors(err.responseJSON)))
 );
 
