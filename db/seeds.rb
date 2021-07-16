@@ -155,7 +155,7 @@ product13 = Product.create!(
     price: 259.99,
     seller_id: 5
 )
-product13.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring1.jpg"), filename: "1.jpg")
+product13.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring1.jpg"), filename: "13.jpg")
 
 product14 = Product.create!(
     product_name: 'Ring',
@@ -164,7 +164,7 @@ product14 = Product.create!(
     price: 200.00,
     seller_id: 5
 )
-product14.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring2.jpg"), filename: "10.jpg")
+product14.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring2.jpg"), filename: "14.jpg")
 
 product15 = Product.create!(
     product_name: 'Ring',
@@ -173,7 +173,7 @@ product15 = Product.create!(
     price: 15.60,
     seller_id: 5
 )
-product15.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring3.jpg"), filename: "11.jpg")
+product15.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring3.jpg"), filename: "15.jpg")
 
 
 product16 = Product.create!(
@@ -183,7 +183,7 @@ product16 = Product.create!(
     price: 100.51,
     seller_id: 5
 )
-product16.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring4.jpg"), filename: "12.jpg")
+product16.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring4.jpg"), filename: "16.jpg")
 
 product17 = Product.create!(
     product_name: 'Ring',
@@ -192,7 +192,7 @@ product17 = Product.create!(
     price: 15.99,
     seller_id: 5
 )
-product17.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring5.jpg"), filename: "12.jpg")
+product17.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring5.jpg"), filename: "17.jpg")
 
 product18 = Product.create!(
     product_name: 'Ring',
@@ -201,5 +201,5 @@ product18 = Product.create!(
     price: 999.99,
     seller_id: 5
 )
-product18.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring6.jpg"), filename: "12.jpg")
+product18.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring6.jpg"), filename: "18.jpg")
 
