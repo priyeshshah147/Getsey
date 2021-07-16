@@ -17,25 +17,25 @@ user1 = User.create!(
 )
 
 user2 = User.create!(
-    username: 'store2',
-    email: 'store2@gmail.com',
-    password: 'store2'    
+    username: 'Yung',
+    email: 'yung@gmail.com',
+    password: 'password'    
 )
 user3 = User.create!(
-    username: 'store3',
-    email: 'store3@gmail.com',
-    password: 'store3'    
+    username: 'Sammy',
+    email: 'sammy@gmail.com',
+    password: 'password'    
 )
 
 user4 = User.create!(
-    username: 'store4',
-    email: 'store4@gmail.com',
-    password: 'store4'    
+    username: 'Donnie',
+    email: 'donnie@gmail.com',
+    password: 'password'    
 )
 user5 = User.create!(
-    username: 'store5',
-    email: 'store5@gmail.com',
-    password: 'store5'    
+    username: 'Ariel',
+    email: 'ariel@gmail.com',
+    password: 'password'    
 )
 
 
@@ -94,45 +94,45 @@ product6 = Product.create!(
 product6.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch5.jpg"), filename: "6.jpg")
 
 product7 = Product.create!(
-    product_name: 'Earing',
-    description: 'Stylish earings that makes you smiles',
-    category_id:1,
+    product_name: 'Wallet',
+    description: 'Koi Fish personalized men wallet, custom gift for men, animal wallet for him, anniversary gift, Father Day gift idea for him 2021',
+    category_id:2,
     price: 25.99,
     seller_id: 5
 )
 product7.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet1.jpg"), filename: "7.jpg")
 
 product8 = Product.create!(
-    product_name: 'Sunglasses',
-    description: 'Its all style and comfort for summer',
-    category_id:1,
-    price: 159.99,
+    product_name: 'Wallet',
+    description: 'PU personalized men wallet, custom gift for men, animal wallet for him, anniversary gift, Father Day gift idea for him 2021',
+    category_id:2,
+    price: 19.99,
     seller_id: 5
 )
 product8.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet2.jpg"), filename: "8.jpg")
 
 product9 = Product.create!(
-    product_name: 'hat',
+    product_name: 'Wallet',
     description: 'Cool style for summer',
-    category_id:1,
+    category_id:2,
     price: 15.60,
     seller_id: 5
 )
 product9.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet3.jpg"), filename: "9.jpg")
 
 product10 = Product.create!(
-    product_name: 'Beats by Dr Dre',
+    product_name: 'Wallet',
     description: 'Highquality heaphones, the best you can ever get',
-    category_id:1,
+    category_id:2,
     price: 200.00,
     seller_id: 5
 )
 product10.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet4.jpg"), filename: "10.jpg")
 
 product11 = Product.create!(
-    product_name: 'Black Heels',
-    description: 'You can`t go wrong with black heels. A perfect match for every dress',
-    category_id:1,
+    product_name: 'Wallet',
+    description: 'You can`t go wrong with black wallet, very fine and good looking',
+    category_id:2,
     price: 15.60,
     seller_id: 5
 )
@@ -140,20 +140,66 @@ product11.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaw
 
 
 product12 = Product.create!(
-    product_name: 'Black Tux',
-    description: 'Style is nothing without a class, so is a man without a suit... nothing',
-    category_id:1,
+    product_name: 'wallet',
+    description: 'Style is nothing without a class, so is a man without a waller... nothing',
+    category_id:2,
     price: 100.51,
     seller_id: 5
 )
 product12.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet6.jpg"), filename: "12.jpg")
 
-# product13 = Product.create!(
-#     product_name: 'Wallet',
-#     description: 'Sleek design for all your cards',
-#     category_id:2,
-#     price: 59.99,
-#     seller_id: 5
-# )
-# product13.photo.attach(io: URI.open("https://getsey-seeds.s3.us-east-2.amazonaws.com/wallet4.jpg"), filename: "1.jpg")
+product13 = Product.create!(
+    product_name: 'Ring',
+    description: 'Rose Gold Tungsten Ring Men Women Wedding Band Beveled Edge Grey Brushed Design 6MM Size 5 6 7 8 9 10 11 12 13 14 Anniversary Love Gift',
+    category_id:3,
+    price: 259.99,
+    seller_id: 5
+)
+product13.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring1.jpg"), filename: "1.jpg")
+
+product14 = Product.create!(
+    product_name: 'Ring',
+    description: 'Highquality titanium ring, the best you can ever get',
+    category_id:3,
+    price: 200.00,
+    seller_id: 5
+)
+product14.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring2.jpg"), filename: "10.jpg")
+
+product15 = Product.create!(
+    product_name: 'Ring',
+    description: 'Casual ring. stylish and affordable',
+    category_id:3,
+    price: 15.60,
+    seller_id: 5
+)
+product15.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring3.jpg"), filename: "11.jpg")
+
+
+product16 = Product.create!(
+    product_name: 'Ring',
+    description: 'Tungsten Carbide Wedding Ring Comfort 6mm or 8mm widths available',
+    category_id:3,
+    price: 100.51,
+    seller_id: 5
+)
+product16.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring4.jpg"), filename: "12.jpg")
+
+product17 = Product.create!(
+    product_name: 'Ring',
+    description: 'Stainless Steel Wedding Ring Comfort 6mm or 8mm widths available',
+    category_id:3,
+    price: 15.99,
+    seller_id: 5
+)
+product17.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring5.jpg"), filename: "12.jpg")
+
+product18 = Product.create!(
+    product_name: 'Ring',
+    description: 'Diamonf Wedding Ring Comfort 6mm or 8mm widths available',
+    category_id:3,
+    price: 999.99,
+    seller_id: 5
+)
+product18.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring6.jpg"), filename: "12.jpg")
 

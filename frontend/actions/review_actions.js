@@ -46,11 +46,12 @@ export const createReview = (review) => dispatch => (
     (err) => dispatch(receiveReviewErrors(err.responseJSON)))
 );
 
-export const updateReview = (review) => dispatch => (
-    ReviewApiUtil.updateReview(review)
+export const updateReview = (review) => dispatch => {
+    
+    return ReviewApiUtil.updateReview(review)
     .then(review => dispatch(receiveReview(review)),
     (err) => dispatch(receiveReviewErrors(err.responseJSON)))
-);
+};
 
 export const deleteReview = (reviewId) => dispatch => (
     ReviewApiUtil.deleteReview(reviewId)

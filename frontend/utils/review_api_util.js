@@ -19,17 +19,19 @@ export const createReview = review => (
     })
 )
 
+
+export const updateReview = review => {
+    
+    return $.ajax({
+        method:'PATCH',
+        url: `/api/reviews/${review.id}`,
+        data: {review}
+    })
+}
+
 export const deleteReview = reviewId => (
     $.ajax({
         method:'DELETE', 
         url: `/api/reviews/${reviewId}`
-    })
-)
-
-export const updateReview = review => (
-    $.ajax({
-        method:'PATCH',
-        url: `/api/reviews/${review.id}`,
-        date: {review}
     })
 )

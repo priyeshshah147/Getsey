@@ -91,3 +91,37 @@
     transform: scale(1.02);
     cursor:pointer;
   }
+
+  .edit-review-btn{
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    border-radius: 24px;
+    border-color: black;
+    background-color: black;
+    color:white ;
+    width: 35px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size:12px;
+    font-family:'Lucida Sans'; 
+    border:none;
+    margin-right: 5px;
+    text-decoration: none;
+  }
+
+  .edit-review-btn:hover{
+    border-color: black;
+    transform: scale(1.02);
+    cursor:pointer;
+    background-color: #000011;
+  }
+
+  .edit-btn-setup{
+      display:flex;
+      flex-direction: row;
+      
+  }
+

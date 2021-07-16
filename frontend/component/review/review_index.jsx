@@ -1,15 +1,19 @@
 import React from 'react';
 // import { withRouter} from 'react-router-dom';
 // import StarRatingComponent from 'react-star-rating-component'
+import {Link} from 'react-router-dom';
 
 class ReviewIndex extends React.Component {
 
     constructor (props){
         super(props)
+        this.state={
+            updating: false
+        }
     }
 
     componentDidMount(){
-        this.props.fetchReviews(this.props.productId)
+        this.props.fetchReviews(this.props.product.id)
     }
 
 
@@ -23,6 +27,8 @@ class ReviewIndex extends React.Component {
                 <div className="review-name">{review.username}</div>
                 <div className="review-star">Rating: {review.rating}</div>
                 <div className="review-comment">{review.comment}</div>
+                <div className="edit-btn-setup"><Link to={`/reviews/${review.id}/update`} className="edit-review-btn">edit</Link> 
+                <Link to={`/products/${review.product_id}`}className="edit-review-btn">delete</Link></div>
                 
             </div>   
           
