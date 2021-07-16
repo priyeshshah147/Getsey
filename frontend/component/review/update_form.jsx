@@ -35,15 +35,21 @@ class UpdateForm extends React.Component {
             <h3 className="review-box">Write a review</h3>
         <form onSubmit={this.handleSubmit}>
             <label className='rating'>Rating 
-                <input className='rating-input' value={this.state.rating} type='number' min="1" max="5" onChange={this.updateRating}/>
+                <input className='rating-input' 
+                value={this.state.rating} 
+                type='number' min="1" max="5" 
+                onChange={this.updateRating}/>
             </label>
             <br/>
             <h3 className="review-box">Comment</h3>
             <label className='review'>
-                <textarea id='review-input' value={this.state.comment} onChange={this.handleChange} />
+                <textarea id='review-input' 
+                value={this.state.comment} 
+                onChange={this.handleChange} />
             </label>
             <br/>
-            <input className='review-create-btn' type='submit' value='Update_review'/>
+            <input className='review-create-btn' 
+            type='submit' value='Update_review'/>
         </form>
         </div>
 

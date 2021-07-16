@@ -148,58 +148,58 @@ product12 = Product.create!(
 )
 product12.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet6.jpg"), filename: "12.jpg")
 
-# product13 = Product.create!(
-#     product_name: 'Ring',
-#     description: 'Rose Gold Tungsten Ring Men Women Wedding Band Beveled Edge Grey Brushed Design 6MM Size 5 6 7 8 9 10 11 12 13 14 Anniversary Love Gift',
-#     category_id:3,
-#     price: 259.99,
-#     seller_id: 5
-# )
-# product13.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring1.jpg"), filename: "13.jpg")
+product13 = Product.create!(
+    product_name: 'Ring',
+    description: 'Rose Gold Tungsten Ring Men Women Wedding Band Beveled Edge Grey Brushed Design 6MM Size 5 6 7 8 9 10 11 12 13 14 Anniversary Love Gift',
+    category_id:3,
+    price: 259.99,
+    seller_id: 5
+)
+product13.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring1.jpg"), filename: "13.jpg")
 
-# product14 = Product.create!(
-#     product_name: 'Ring',
-#     description: 'Highquality titanium ring, the best you can ever get',
-#     category_id:3,
-#     price: 200.00,
-#     seller_id: 5
-# )
-# product14.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring2.jpg"), filename: "14.jpg")
+product14 = Product.create!(
+    product_name: 'Ring',
+    description: 'Highquality titanium ring, the best you can ever get',
+    category_id:3,
+    price: 200.00,
+    seller_id: 5
+)
+product14.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring2.jpg"), filename: "14.jpg")
 
-# product15 = Product.create!(
-#     product_name: 'Ring',
-#     description: 'Casual ring. stylish and affordable',
-#     category_id:3,
-#     price: 15.60,
-#     seller_id: 5
-# )
-# product15.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring3.jpg"), filename: "15.jpg")
+product15 = Product.create!(
+    product_name: 'Ring',
+    description: 'Casual ring. stylish and affordable',
+    category_id:3,
+    price: 15.60,
+    seller_id: 5
+)
+product15.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring3.jpg"), filename: "15.jpg")
 
 
-# product16 = Product.create!(
-#     product_name: 'Ring',
-#     description: 'Tungsten Carbide Wedding Ring Comfort 6mm or 8mm widths available',
-#     category_id:3,
-#     price: 100.51,
-#     seller_id: 5
-# )
-# product16.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring4.jpg"), filename: "16.jpg")
+product16 = Product.create!(
+    product_name: 'Ring',
+    description: 'Tungsten Carbide Wedding Ring Comfort 6mm or 8mm widths available',
+    category_id:3,
+    price: 100.51,
+    seller_id: 5
+)
+product16.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring4.jpg"), filename: "16.jpg")
 
-# product17 = Product.create!(
-#     product_name: 'Ring',
-#     description: 'Stainless Steel Wedding Ring Comfort 6mm or 8mm widths available',
-#     category_id:3,
-#     price: 15.99,
-#     seller_id: 5
-# )
-# product17.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring5.jpg"), filename: "17.jpg")
+product17 = Product.create!(
+    product_name: 'Ring',
+    description: 'Stainless Steel Wedding Ring Comfort 6mm or 8mm widths available',
+    category_id:3,
+    price: 15.99,
+    seller_id: 5
+)
+product17.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring6.jpg"), filename: "17.jpg")
 
-# product18 = Product.create!(
-#     product_name: 'Ring',
-#     description: 'Diamond Wedding Ring Comfort 6mm or 8mm widths available',
-#     category_id:3,
-#     price: 999.99,
-#     seller_id: 5
-# )
-# product18.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring6.jpg"), filename: "18.jpg")
+product18 = Product.create!(
+    product_name: 'Ring',
+    description: 'Diamond Wedding Ring Comfort 6mm or 8mm widths available',
+    category_id:3,
+    price: 999.99,
+    seller_id: 5
+)
+product18.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring7.jpg"), filename: "18.jpg")
 

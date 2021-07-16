@@ -18,10 +18,8 @@ class ProductShow extends React.Component {
       return(
          (product)? <div className="complete-showpage">
                         <div className="product-showpage">
-                            {/* <div className="product-display"> */}
                                 <img className="product-show-icon" src={product.image}/>
-                                <img className="product-show" src={product.image}/>
-                            {/* </div> */}
+                                <img className="product-show" src={product.image}/>                            
                             <div className="product-details">
                                 <ul>
                                 <li className="product-name-show">{product.product_name}</li>
@@ -33,17 +31,11 @@ class ProductShow extends React.Component {
                             </div>
                         </div>
                         <div className="review-index">
-                            {/* <h3 className="review-title">Reviews</h3> */}
                             <ReviewFormContainer product={product}/>
                             <ReviewIndexContainer product={product}/> 
                             
                         </div> 
                     </div> : null
-            
-
-    
-          
-       
       )
   }
 }
