@@ -4,7 +4,7 @@ import { createReview } from '../../utils/review_api_util';
 import ReviewIndex from './review_index'
 
 const mSTP = state => {
-    // debugger
+    // 
     return{
     reviews: Object.values(state.entities.reviews)
     }

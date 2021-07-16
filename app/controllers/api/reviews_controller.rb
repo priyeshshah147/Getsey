@@ -1,7 +1,7 @@
 class Api::ReviewsController < ApplicationController
     before_action :require_logged_in!, only: [:create, :destroy, :update]
     def create
-        # debugger
+        # 
         @user = current_user
         @review = Review.new(product_id:params[:review][:product_id], 
         comment:params[:review][:comment], 
@@ -21,7 +21,7 @@ class Api::ReviewsController < ApplicationController
     def index 
         
         @reviews = Review.includes(:reviewer).find_by_product_id(params[:product_id])
-        debugger
+        
         render :index
     end
 
@@ -36,8 +36,11 @@ class Api::ReviewsController < ApplicationController
     # end
 
     def update
-        @review = current_user.reviews.find_by(id: params[:id])
-        if @review.update(review_params)
+        @review = Review.find_by(id: params[:id])
+        if @review && review.update(
+            comment: params[:review][:description],
+            rating: params[:review][:rating]
+            )
             render :show
         else
             render json: @review.errors.full_messages, status:422

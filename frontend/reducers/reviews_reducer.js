@@ -8,7 +8,7 @@ const reviewReducer = (state={}, action) => {
         case RECEIVE_REVIEWS:
             return Object.assign({}, state, action.reviews)
         case RECEIVE_REVIEW:
-            // debugger
+            // 
             nextState[action.review.id] = action.review
             return nextState;
         case REMOVE_REVIEW:

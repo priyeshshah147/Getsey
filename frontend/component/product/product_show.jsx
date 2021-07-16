@@ -33,9 +33,10 @@ class ProductShow extends React.Component {
                             </div>
                         </div>
                         <div className="review-index">
-                            <h3 className="review-title">Reviews</h3>
-                            <ReviewIndexContainer product={product}/> 
+                            {/* <h3 className="review-title">Reviews</h3> */}
                             <ReviewFormContainer product={product}/>
+                            <ReviewIndexContainer product={product}/> 
+                            
                         </div> 
                     </div> : null
             

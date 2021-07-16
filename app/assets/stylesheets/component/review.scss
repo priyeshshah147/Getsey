@@ -1,0 +1,93 @@
+.review{
+    margin-top:30px;
+    margin-bottom:50px;
+}
+
+.review-index{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+    // border: solid black;
+    width: 30%;
+
+}
+
+.review-name{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-family: 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.review-count, .review-comment{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family:  'Lucida Sans', Arial, sans-serif;
+}
+
+.review-star{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family:  'Lucida Sans', Arial, sans-serif;
+}
+
+.review-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family:  'Lucida Sans', Arial, sans-serif;
+}
+
+
+.rating{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Lucida Sans', Arial, sans-serif;
+   
+}
+
+.rating-input{
+    width: 30px;
+    margin-left: 10px;
+}
+
+#review-input{
+    width: 500px;
+    height: 120px;
+    border: solid 2px;
+    border-radius: 3px;
+}
+
+ .review-create-btn{
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    border-radius: 24px;
+    border-color: black;
+    background-color: black;
+    color:white ;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size:12px;
+    font-family:'Lucida Sans'; 
+    width: 120px;
+    height: 40px;
+    border:none;
+  }
+
+ .review-create-btn:hover{
+    // background-color: black;
+    border-color: black;
+    transform: scale(1.02);
+    cursor:pointer;
+  }

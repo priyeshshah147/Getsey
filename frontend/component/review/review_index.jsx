@@ -12,21 +12,32 @@ class ReviewIndex extends React.Component {
         this.props.fetchReviews(this.props.productId)
     }
 
+
     render(){
         
         const {reviews} = this.props
         const productReviews = reviews.filter(review => review.product_id === this.props.product.id)
-        // debugger
+        
+        let reviewdivs = productReviews.map(review => (
+            <div key={review.id} className="review">        
+                <div className="review-name">{review.username}</div>
+                <div className="review-star">Rating: {review.rating}</div>
+                <div className="review-comment">{review.comment}</div>
+                
+            </div>   
+          
+       ))
+
+       let count = productReviews.length
+   
+        // 
         return (
             <div>
+                <p className="review-count">{count} review(s)</p>
                {
-
-                   productReviews.map(review => (
-                       
-                       <p>{this.props.username},Rating:{review.rating},{review.comment}</p>
-                       
-                   ))
+                   reviewdivs
                }
+
             </div>
         )
             

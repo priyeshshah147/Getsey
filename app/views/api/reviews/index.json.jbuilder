@@ -4,7 +4,7 @@
         # json.partial! `/api/reviews/review`, review: review
         json.set! review.id do
             json.extract! review, :id, :rating, :comment, :product_id, :reviewer_id 
-            # json.username reviewer.username
+            json.username review.reviewer.username
             json.set! review.reviewer.id do
                 json.extract! review.reviewer, :username, :id
             end
