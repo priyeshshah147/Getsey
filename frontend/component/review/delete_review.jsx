@@ -13,7 +13,7 @@ class DeleteReview extends React.Component {
     render (){
         return(
             <div>
-                <button onClick={this.handleSubmit} className="edit-review-btn">delete potato</button>
+                <button onClick={this.handleSubmit} className="edit-review-btn">delete</button>
             </div>
         )
     }
