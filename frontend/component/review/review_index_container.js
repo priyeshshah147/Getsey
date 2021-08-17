@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import { fetchReviews } from '../../actions/review_actions';
+import { fetchReviews, deleteReview } from '../../actions/review_actions';
 import { createReview } from '../../utils/review_api_util';
 import ReviewIndex from './review_index'
 
@@ -12,7 +12,7 @@ const mSTP = state => {
 
 const mDTP = dispatch => ({
     fetchReviews: (productId) => dispatch(fetchReviews(productId)),
-
+    deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
 
 })
 

@@ -2,6 +2,7 @@ import React from 'react';
 // import { withRouter} from 'react-router-dom';
 // import StarRatingComponent from 'react-star-rating-component'
 import {Link} from 'react-router-dom';
+import DeleteReview from './delete_review';
 
 class ReviewIndex extends React.Component {
 
@@ -19,7 +20,7 @@ class ReviewIndex extends React.Component {
 
     render(){
         
-        const {reviews} = this.props
+        const {reviews, deleteReview} = this.props
         const productReviews = reviews.filter(review => review.product_id === this.props.product.id)
         
         let reviewdivs = productReviews.map(review => (
@@ -28,8 +29,8 @@ class ReviewIndex extends React.Component {
                 <div className="review-star">Rating: {review.rating}</div>
                 <div className="review-comment">{review.comment}</div>
                 <div className="edit-btn-setup"><Link to={`/reviews/${review.id}/update`} className="edit-review-btn">edit</Link> 
-                <Link to={`/products/${review.product_id}`}className="edit-review-btn">delete</Link></div>
-                
+                {/* <Link to={`/products/${review.product_id}`}className="edit-review-btn">delete</Link></div> */}
+                <DeleteReview review={review} deleteReview={deleteReview}/></div>
             </div>   
           
        ))
