@@ -9,7 +9,7 @@ const display = currentUser ? (
     <div>
       <nav className="arrange-button">
       <button className="logout-button-nav" onClick={logout}>Logout</button>
-      <h3 className="profile-name">Hi {currentUser.username}</h3>
+      <h3 className="profile-name">Welcome {currentUser.username}</h3>
       </nav>
     </div>
   ) : (
