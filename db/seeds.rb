@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 # User.connection.execute('ALTER SEQUENCE users_id_seq RESTART WITH 1')
-Product.delete_all
+# Product.delete_all
 User.delete_all
 
 user1 = User.create!(
@@ -39,167 +39,252 @@ user5 = User.create!(
 )
 
 
-product1 = Product.create!(
+product1 = Product.find_or_create_by(
     product_name: 'Schaffhausen',
     description: 'SCHAFFHAUSEN, Watch, mens watch, mechanical wristWatch, modern watch, Swiss made, gift for men',
     category_id:1,
     price: 299.99,
     seller_id: 1
 )
-product1.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch.jpg"), filename: "1.jpg")
 
-product2 = Product.create!(
+if !product1.photo.attached?
+    product1.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch.jpg"), filename: "1.jpg")
+end
+product2 = Product.find_or_create_by(
     product_name: 'Custom Watch',
     description: 'Personalized Custom Watch Groomsmen Watch Father Of The Groom Best Man Gift Ideas Engraved Metal Watch Usher Gift Wedding Party Gift',
     category_id:1,
     price: 50.50,
     seller_id: 2
 )
-product2.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch1.jpg"), filename: "2.jpg")
-
-product3 = Product.create!(
+if !product2.photo.attached?
+    product2.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch1.jpg"), filename: "2.jpg")
+end
+product3 = Product.find_or_create_by(
     product_name: 'Mi Band',
     description: 'Xiaomi Watch Strap - Mi band 6,5,4,3 Strap Nylon Sport loop watch Belt Pulsera correa Miband - Hyper Grape',
     category_id:1,
     price: 45.99,
     seller_id: 1
 )
-product3.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch2.jpg"), filename: "3.jpg")
-
-product4 = Product.create!(
+if !product3.photo.attached?
+    product3.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch2.jpg"), filename: "3.jpg")
+end
+product4 = Product.find_or_create_by(
     product_name: 'Tissot',
     description: 'Tissot Chronograph mens watch stainless steel swiss watch',
     category_id:1,
     price: 149.99,
     seller_id: 1
 )
-product4.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch3.jpg"), filename: "4.jpg")
-
-product5 = Product.create!(
+if !product4.photo.attached?
+    product4.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch3.jpg"), filename: "4.jpg")
+end
+product5 = Product.find_or_create_by(
     product_name: 'Omega',
     description: 'Omega vintage Tiffany & Co. Gold Plated mens 1950 Automatic Bumper Caliber 342 watch',
     category_id:1,
     price: 131.50,
     seller_id: 3
 )
-product5.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch4.jpg"), filename: "5.jpg")
-
-product6 = Product.create!(
+if !product5.photo.attached?
+    product5.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch4.jpg"), filename: "5.jpg")
+end
+product6 = Product.find_or_create_by(
     product_name: 'DW',
     description: 'Daniel Wellington Classy Brown & Silver Toned Wristwatch w/ Adjustable Band',
     category_id:1,
     price: 7.50,
     seller_id: 5
 )
-product6.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch5.jpg"), filename: "6.jpg")
-
-product7 = Product.create!(
+if !product6.photo.attached?
+    product6.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch5.jpg"), filename: "6.jpg")
+end
+product7 = Product.find_or_create_by(
     product_name: 'Wallet',
     description: 'Koi Fish personalized men wallet, custom gift for men, animal wallet for him, anniversary gift, Father Day gift idea for him 2021',
     category_id:2,
     price: 25.99,
     seller_id: 5
 )
-product7.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet1.jpg"), filename: "7.jpg")
-
-product8 = Product.create!(
+if !product7.photo.attached?
+    product7.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet1.jpg"), filename: "7.jpg")
+end
+product8 = Product.find_or_create_by(
     product_name: 'Wallet',
     description: 'PU personalized men wallet, custom gift for men, animal wallet for him, anniversary gift, Father Day gift idea for him 2021',
     category_id:2,
     price: 19.99,
     seller_id: 5
 )
-product8.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet2.jpg"), filename: "8.jpg")
-
-product9 = Product.create!(
+if !product8.photo.attached?
+    product8.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet2.jpg"), filename: "8.jpg")
+end
+product9 = Product.find_or_create_by(
     product_name: 'Wallet',
     description: 'Cool style for summer',
     category_id:2,
     price: 15.60,
     seller_id: 5
 )
-product9.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet3.jpg"), filename: "9.jpg")
-
-product10 = Product.create!(
+if !product9.photo.attached?
+    product9.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet3.jpg"), filename: "9.jpg")
+end
+product10 = Product.find_or_create_by(
     product_name: 'Wallet',
     description: 'Highquality heaphones, the best you can ever get',
     category_id:2,
     price: 200.00,
     seller_id: 5
 )
-product10.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet4.jpg"), filename: "10.jpg")
-
-product11 = Product.create!(
+if !product10.photo.attached?
+    product10.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet4.jpg"), filename: "10.jpg")
+end
+product11 = Product.find_or_create_by(
     product_name: 'Wallet',
     description: 'You can`t go wrong with black wallet, very fine and good looking',
     category_id:2,
     price: 15.60,
     seller_id: 5
 )
-product11.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet5.jpg"), filename: "11.jpg")
+if !product11.photo.attached?
+    product11.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet5.jpg"), filename: "11.jpg")
+end
 
-
-product12 = Product.create!(
+product12 = Product.find_or_create_by(
     product_name: 'wallet',
     description: 'Style is nothing without a class, so is a man without a waller... nothing',
     category_id:2,
     price: 100.51,
     seller_id: 5
 )
-product12.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet6.jpg"), filename: "12.jpg")
-
-product13 = Product.create!(
+if !product12.photo.attached?
+    product12.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet6.jpg"), filename: "12.jpg")
+end
+product13 = Product.find_or_create_by(
     product_name: 'Ring',
     description: 'Rose Gold Tungsten Ring Men Women Wedding Band Beveled Edge Grey Brushed Design 6MM Size 5 6 7 8 9 10 11 12 13 14 Anniversary Love Gift',
     category_id:3,
     price: 259.99,
     seller_id: 5
 )
-product13.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring1.jpg"), filename: "13.jpg")
-
-product14 = Product.create!(
+if !product13.photo.attached?
+    product13.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring1.jpg"), filename: "13.jpg")
+end
+product14 = Product.find_or_create_by(
     product_name: 'Ring',
     description: 'Highquality titanium ring, the best you can ever get',
     category_id:3,
     price: 200.00,
     seller_id: 5
 )
-product14.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring2.jpg"), filename: "14.jpg")
-
-product15 = Product.create!(
+if !product14.photo.attached?
+    product14.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring2.jpg"), filename: "14.jpg")
+end
+product15 = Product.find_or_create_by(
     product_name: 'Ring',
     description: 'Casual ring. stylish and affordable',
     category_id:3,
     price: 15.60,
     seller_id: 5
 )
-product15.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring3.jpg"), filename: "15.jpg")
+if !product15.photo.attached?
+    product15.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring3.jpg"), filename: "15.jpg")
+end
 
-
-product16 = Product.create!(
+product16 = Product.find_or_create_by(
     product_name: 'Ring',
     description: 'Tungsten Carbide Wedding Ring Comfort 6mm or 8mm widths available',
     category_id:3,
     price: 100.51,
     seller_id: 5
 )
-product16.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring4.jpg"), filename: "16.jpg")
+if !product16.photo.attached?
+    product16.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring4.jpg"), filename: "16.jpg")
+end
 
-product17 = Product.create!(
+product17 = Product.find_or_create_by(
     product_name: 'Ring',
     description: 'Stainless Steel Wedding Ring Comfort 6mm or 8mm widths available',
     category_id:3,
     price: 15.99,
     seller_id: 5
 )
-product17.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring6.jpg"), filename: "17.jpg")
-
-product18 = Product.create!(
+if !product17.photo.attached?
+    product17.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring6.jpg"), filename: "17.jpg")
+end
+product18 = Product.find_or_create_by(
     product_name: 'Ring',
     description: 'Diamond Wedding Ring Comfort 6mm or 8mm widths available',
     category_id:3,
     price: 999.99,
     seller_id: 5
 )
-product18.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring7.jpg"), filename: "18.jpg")
+if !product18.photo.attached?
+    product18.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring7.jpg"), filename: "18.jpg")
+end
+product19 = Product.find_or_create_by(
+    product_name: 'Glasses',
+    description: 'Steampunk Round, Blue Reflective, Sunglasses, Unisex, Trendy, Retro, Urban, Hippie, Steampunk, Cool, Vintage Style, Unisex, Steampunk Hip',
+    category_id:4,
+    price: 19.95,
+    seller_id: 2
+)
+if !product19.photo.attached?
+    product19.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass1.jpg"), filename: "19.jpg")
+end
 
+product20 = Product.find_or_create_by(
+    product_name: 'Glasses',
+    description: 'Brooklyn, (Bling) Reading Glasses for Women W (Hematite + L. Colorado) Genuine European Crystals. +1.25..+3 Square. NY Fifth Avenue',
+    category_id:4,
+    price: 29.95,
+    seller_id: 2
+)
+if !product20.photo.attached?
+    product20.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass2.jpg"), filename: "20.jpg")
+end
+
+product21 = Product.find_or_create_by(
+    product_name: 'Glasses',
+    description: '90s Square Sunglasses Vintage Inspired , Black Glasses, Orange, Pink, Yellow, Red Lenses, Plastic Frame, Women, Men, Unisex',
+    category_id:4,
+    price: 14.95,
+    seller_id: 2
+)
+if !product21.photo.attached?
+    product21.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass3.jpg"), filename: "21.jpg")
+end
+
+product22 = Product.find_or_create_by(
+    product_name: 'Glasses',
+    description: 'Golden Boy 1970s Wire Rim Aviator Glasses – Mens Wire Frame Aviator Sunglasses – Shiny Gold Aviator Sunglasses – Old Stock Golden Aviators',
+    category_id:4,
+    price: 66.00,
+    seller_id: 2
+)
+if !product22.photo.attached?
+    product22.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass4.jpg"), filename: "22.jpg")
+end
+
+product23 = Product.find_or_create_by(
+    product_name: 'Glasses',
+    description: 'Ray Ban Wayfarer Black Classic Sunglasses - 901 RB2140 - 50mm 54mm',
+    category_id:4,
+    price: 59.99,
+    seller_id: 2
+)
+if !product23.photo.attached?
+    product23.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass5.jpg"), filename: "23.jpg")
+end
+
+product24 = Product.find_or_create_by(
+    product_name: 'Glasses',
+    description: 'New Rayban Tortoise Brown Clubmaster Sunglasses Ray Ban',
+    category_id:4,
+    price: 28.00,
+    seller_id: 2
+)
+if !product24.photo.attached?
+    product24.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass7.jpg"), filename: "24.jpg")
+end

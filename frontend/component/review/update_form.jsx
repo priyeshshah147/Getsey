@@ -31,7 +31,7 @@ class UpdateForm extends React.Component {
 
         return(
            
-        <div className='review-form-container'>
+        <div className='review-form2-container'>
             <h3 className="review-box">Write a review</h3>
         <form onSubmit={this.handleSubmit}>
             <label className='rating'>Rating 
