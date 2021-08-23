@@ -1,27 +1,63 @@
-{/* <div>
-    <div>
-        <ul>
-            <div className="category-nav-div">
-            <li className="category-nav">
-                Back to School Trends 
-            </li>
-            </div>
-            <div className="category-nav-div">
-            <li className="category-nav">
-                Computer & Accesories 
-            </li>
-            </div>
-            <div className="category-nav-div">
-            <li className="category-nav">
-                Jewelry & Accesories
-            </li>
-            </div>
-            <div className="category-nav-div">
-            <li className="category-nav">
-                Home & Living
-            </li>
-            </div>
-        </ul>
-    </div>
+import React from 'react';
 
-</div> */}
+class CategoryNav extends React.Component {
+
+    render(){
+
+        return(
+     
+        <div className="nav-list">
+        
+            <div className="category-nav-div">
+              <button className="category-button">
+                Back to School Trends 
+              </button>
+            </div>
+
+            <div className="category-nav-div">
+              <button className="category-button">
+                Computer & Accesories 
+              </button>
+            </div>
+
+            <div className="category-nav-div">
+              <button className="category-button">
+                Clothing & Shoes 
+              </button>
+            </div>
+
+            <div className="category-nav-div">
+            <button className="category-button">
+                Jewelry & Accesories
+              </button>
+            </div>
+
+            <div className="category-nav-div">
+              <button className="category-button">
+                Home & Living
+              </button>
+            </div>
+
+            <div className="category-nav-div">
+              <button className="category-button">
+                Wedding & Party
+              </button>
+            </div>
+
+            <div className="category-nav-div">
+              <button className="category-button">
+                Toy & Entertaiment
+              </button>
+            </div>
+
+            <div className="category-nav-div">
+              <button className="category-button">
+                Art & Collectibles
+              </button>
+            </div>        
+        </div>
+            )
+
+ } }
+
+ export default CategoryNav;

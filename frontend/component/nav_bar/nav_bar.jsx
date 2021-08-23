@@ -1,26 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {FaSearch, FaShoppingCart} from 'react-icons/fa';
+import CategoryNavContainer from '../category/category_container';
 
 
 export default ({ currentUser, logout, openModal }) => {
 
 const display = currentUser ? (
-    <div>
-      <nav className="arrange-button">
+    <div className="arrange-button">
+      <div><FaShoppingCart/></div>
       <button className="logout-button-nav" onClick={logout}>Logout</button>
       <h3 className="profile-name">Welcome {currentUser.username}</h3>
-      </nav>
     </div>
   ) : (
     <div className="arrange-button">
       <button className="cart">
-        <FaShoppingCart/>
       </button>
       <button className="signup-button-nav" onClick={()=>openModal('signup')}>Signup</button>
       <br></br>
       <button className="login-button-nav" onClick={()=>openModal('login')}>Log In</button>
-
     </div>
   );
   return (
@@ -42,59 +40,10 @@ const display = currentUser ? (
           {display}
         </div>
       </div>
-      <div>
-    <div className="nav-list">
-        
-            <div className="category-nav-div">
-              <button className="category-button">
-                Back to School Trends 
-              </button>
-            </div>
+      {/* <div> */}
+      <CategoryNavContainer/>
 
-            <div className="category-nav-div">
-              <button className="category-button">
-                Computer & Accesories 
-              </button>
-            </div>
-
-            <div className="category-nav-div">
-              <button className="category-button">
-                Clothing & Shoes 
-              </button>
-            </div>
-
-            <div className="category-nav-div">
-            <button className="category-button">
-                Jewelry & Accesories
-              </button>
-            </div>
-
-            <div className="category-nav-div">
-              <button className="category-button">
-                Home & Living
-              </button>
-            </div>
-
-            <div className="category-nav-div">
-              <button className="category-button">
-                Wedding & Party
-              </button>
-            </div>
-
-            <div className="category-nav-div">
-              <button className="category-button">
-                Toy & Entertaiment
-              </button>
-            </div>
-
-            <div className="category-nav-div">
-              <button className="category-button">
-                Art & Collectibles
-              </button>
-            </div>        
-    </div>
-
-</div>
+{/* </div> */}
 
             
     </header>

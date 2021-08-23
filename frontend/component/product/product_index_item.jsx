@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ProductIndexItem = ({product}) => {
 return(
+    // <splash/>
        
     <div className="couple-product-price">
     <Link  to={`/products/${product.id}`}>
