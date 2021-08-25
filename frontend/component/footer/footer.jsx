@@ -39,11 +39,11 @@ class Footer extends React.Component{
                             </div>
                             <div className="footer-column">
                                 <h3 className="footer-header">Get to know me and more</h3>
-                                <div class="personal-links">
-                                    <a target="_blank" href="https://github.com/priyeshshah147/Getsey"><Icon icon="bi:github" /></a>
-                                    <a target="_blank" href="https://github.com/priyeshshah147"><Icon icon="whh:profile"/></a>
-                                    <a target="_blank" href="https://www.linkedin.com/in/priyesh-shah-bb612688/" ><Icon icon="brandico:linkedin-rect" /></a>
-                                    <a target="_blank" href="https://angel.co/u/priyesh-shah-3"><Icon icon="fa:angellist" /></a> 
+                                <div className="personal-links">
+                                    <a target="_blank" href="https://github.com/priyeshshah147/Getsey"><Icon className="icons"  icon="bi:github" color="white" width="40" height="40" /></a>
+                                    <a target="_blank" href="https://github.com/priyeshshah147"><Icon className="icons"  color="white" width="40" height="40"   icon="whh:profile"/></a>
+                                    <a target="_blank" href="https://www.linkedin.com/in/priyesh-shah-bb612688/" ><Icon className="icons"  color="white" width="40" height="40"   icon="brandico:linkedin-rect" /></a>
+                                    <a target="_blank" href="https://angel.co/u/priyesh-shah-3"><Icon className="icons"  color="white" width="40" height="40"   icon="fa:angellist" /></a> 
                                 </div>
                             </div>
                         </div>
