@@ -26,6 +26,7 @@
     "webpack": "webpack --watch --mode=development"
   },
   "devDependencies": {
+    "@iconify/react": "^3.0.1",
     "webpack-cli": "^4.7.2"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",

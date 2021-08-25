@@ -8,29 +8,23 @@ import Modal from './modal/modal';
 import ProductIndexContainer from "./product/product_index_container"
 import ProductShowContainer from "./product/product_show_container"
 import UpdateFormContainer from "./review/update_form_container"
-
+import Footer from './footer/footer'
 
 
 
 export default () => (
     <div>
-    <Modal/>
-    
-    <header>
-      {/* <Link to="/" className="header-link">
-      </Link> */}
-      <NavBarContainer />
-      
+      <Modal/>
+      <header>
+        <NavBarContainer />
       </header>
-    <div>
-        {/* <Route path="/" component={NavBarContainer}/> */}
-        <Route exact path="/" component={ProductIndexContainer}/>
-        <Route exact path="/products/:productId"component={ProductShowContainer}/>
-        <Route exact path="/reviews/:reviewId/update" component={UpdateFormContainer}/>
-        {/* <AuthRoute exact path='/login' component={LoginContainer}/>
-        <AuthRoute exact path='/signup' component={SignupContainer}/> */}
-        
-        
-    </div>
+      <div>
+          <Route exact path="/" component={ProductIndexContainer}/>
+          <Route exact path="/products/:productId"component={ProductShowContainer}/>
+          <Route exact path="/reviews/:reviewId/update" component={UpdateFormContainer}/> 
+      </div>
+      <Footer/>
+        {/* <div className="footer">Hello</div>
+      </footer> */}
     </div>
 )
