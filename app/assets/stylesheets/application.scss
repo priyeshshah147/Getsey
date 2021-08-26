@@ -35,14 +35,13 @@
 .photo-disp {
     height:170px;
     width: 200px;
+    border-radius: 5px;
 }
 
 .photo-disp:hover {
-    height:170px;
-    width: 200px;
-    -moz-box-shadow: 0 0 20px #ccc;
-    -webkit-box-shadow: 0 0 20px #ccc;
-    box-shadow: 0 0 20px #ccc;
+    -moz-box-shadow: 0 0 10px rgb(134, 134, 134);
+    -webkit-box-shadow: 0 0 10px rgb(134, 134, 134);
+    box-shadow: 0 0 10px rgb(134, 134, 134);
 }
 
 .couple-product-price{
