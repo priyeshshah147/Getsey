@@ -6,8 +6,8 @@ const ProductPiece = props => {
         <div>
            {
                props.product.map(product => 
-                <Link to={`products/${product.id}`} key={product.id}>
-                <img src={product.image}/>
+                <Link to={`products/${product.id}`} style={{ textDecoration:'none', color:'black'}} key={product.id}>
+                <img src={product.image} className="photo-disp-splash"/>
                 </Link>)
            } 
         </div>

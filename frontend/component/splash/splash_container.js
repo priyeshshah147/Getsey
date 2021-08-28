@@ -1,16 +1,18 @@
 import {connect} from 'react-redux';
-import { fetchProducts } from '../../actions/product_actions';
+import { fetchProducts, fetchProduct } from '../../actions/product_actions';
 import Splash from './splash';
 
 const mSTP = (state, ownProps) => {
     return {
-        products: Object.values(state.entities.products)
+        products: Object.values(state.entities.products),
+        product: state.entities.products[ownProps.match.params.productId]
     }
 }
 
 const mDTP = (dispatch) => {
     return{
-        fetchProducts: () => dispatch(fetchProducts())
+        fetchProducts: () => dispatch(fetchProducts()),
+        fetchProduct: (productId) => dispatch(fetchProduct(productId))
     }
 }
 

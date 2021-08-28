@@ -39,6 +39,7 @@
 }
 
 .photo-disp:hover {
+    transform: scale(1.02); 
     -moz-box-shadow: 0 0 10px rgb(134, 134, 134);
     -webkit-box-shadow: 0 0 10px rgb(134, 134, 134);
     box-shadow: 0 0 10px rgb(134, 134, 134);
