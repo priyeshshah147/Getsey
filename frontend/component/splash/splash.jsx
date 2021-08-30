@@ -1,21 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import ProductPiece from './product_piece';
-import ProductIndexContainer from '../product/product_index_container';
+import ProductSlice from './product_slice';
+// import ProductIndexContainer from '../product/product_index_container';
 
 class Splash extends React.Component{
-    // constructor(props){
-    //     super(props)
-    // }
+  
 
     componentDidMount(){
         this.props.fetchProducts();
-        // this.props.fetchProduct(this.props.match.params.productId);
     }
     render(){
         const { products} = this.props
         return(
-            <div>
+            <div className="splash-page">
                 <div className="first-layer">
                     <div className='first-layer-title'>
                         <p className="front-title">Toys, Made in the USA</p>
@@ -26,14 +24,22 @@ class Splash extends React.Component{
                         <ProductPiece product={products.slice(32,33)} />
                         <ProductPiece product={products.slice(33,34)} />
                         <ProductPiece product={products.slice(34,35)} />
-                        <ProductPiece product={products.slice(35,36)}  />  
+                        <ProductPiece product={products.slice(35,36)} />  
                     </ul>
                 </div >
 
+                
+
                 <div className="second-layer">
-                    
+                    <h3 className="splash-mini-title">Recently viewed & more</h3>
+                    <ProductSlice  products={products.slice(0,6)}/>
                 </div>
-                {/* <ProductIndexContainer/> */}
+
+                <div className="second-layer">
+                    <h3 className="splash-mini-title">Other Items</h3>
+                    <ProductSlice  products={products.slice(24,30)}/>
+                </div>
+                
             </div>
         )
     }
