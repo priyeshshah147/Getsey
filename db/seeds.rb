@@ -288,3 +288,134 @@ product24 = Product.find_or_create_by(
 if !product24.photo.attached?
     product24.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass7.jpg"), filename: "24.jpg")
 end
+
+product25 = Product.find_or_create_by(
+    product_name: 'Sport Shoes',
+    description: 'Nike Men Running Shoes Non Slip Shoes Breathable Lightweight Sneakers Slip Resistant Athletic Sports Walking Gym Work Shoes',
+    category_id:5,
+    price: 200.00,
+    seller_id: 6
+)
+if !product25.photo.attached?
+    product25.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe1.jpg"), filename: "25.jpg")
+end
+product26 = Product.find_or_create_by(
+    product_name: 'Sport Shoes',
+    description: 'adidas Women Grand Court Sneaker',
+    category_id:5,
+    price: 64.95,
+    seller_id: 6
+)
+if !product26.photo.attached?
+    product26.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe.jpg"), filename: "26.jpg")
+end
+
+product27 = Product.find_or_create_by(
+    product_name: 'Sport Shoes',
+    description: 'Nike womens Running shoes. Orange and white',
+    category_id:5,
+    price: 102.67,
+    seller_id: 6
+)
+if !product27.photo.attached?
+    product27.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe2.jpg"), filename: "27.jpg")
+end
+
+product28 = Product.find_or_create_by(
+    product_name: 'Sport Shoes',
+    description: 'Nike Mens Free RN Flyknit Running Shoe',
+    category_id:5,
+    price: 79.00,
+    seller_id: 7
+)
+if !product28.photo.attached?
+    product28.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe3.jpg"), filename: "28.jpg")
+end
+
+product29 = Product.find_or_create_by(
+    product_name: 'Sport Shoes',
+    description: 'Nike Jordan 1 Mid Igloo Mens 554724-132',
+    category_id:5,
+    price: 169.95,
+    seller_id: 7
+)
+if !product29.photo.attached?
+    product29.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe4.jpg"), filename: "29.jpg")
+end
+
+product30 = Product.find_or_create_by(
+    product_name: 'Sport Shoes',
+    description: 'Nike Air Max 270',
+    category_id:5,
+    price: 150.00,
+    seller_id: 7
+)
+if !product30.photo.attached?
+    product30.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe5.jpg"), filename: "30.jpg")
+end
+
+product31 = Product.find_or_create_by(
+    product_name: 'Soccer Ball',
+    description: 'FC Barcelona Authentic Official Licensed Soccer Ball Size 5 - 11-2',
+    category_id:6,
+    price: 20.99,
+    seller_id: 7
+)
+if !product31.photo.attached?
+    product31.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ball1.jpg"), filename: "31.jpg")
+end
+
+product32 = Product.find_or_create_by(
+    product_name: 'Hot Wheels',
+    description: 'Jada Toys Fast & Furious F9 1:24 1968 Dodge Charger Widebody Die-cast Car, Toys for Kids and Adults',
+    category_id:6,
+    price: 8.99,
+    seller_id: 7
+)
+if !product32.photo.attached?
+    product32.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/car5.jpg"), filename: "32.jpg")
+end
+
+product33 = Product.find_or_create_by(
+    product_name: 'Dog Toys',
+    description: 'Classic Goodie Bone Dog Toy',
+    category_id:6,
+    price: 14.99,
+    seller_id: 7
+)
+if !product33.photo.attached?
+    product33.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/dogt3.jpg"), filename: "33.jpg")
+end
+
+product34 = Product.find_or_create_by(
+    product_name: 'Action figures',
+    description: 'Marvel Guardians of The Galaxy Groot Ravager Outfit Action Figure',
+    category_id:6,
+    price: 22.95,
+    seller_id: 8
+)
+if !product34.photo.attached?
+    product34.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/action5.jpg"), filename: "34.jpg")
+end
+
+product35 = Product.find_or_create_by(
+    product_name: 'Baby Puzzles',
+    description: 'Fisher-Price Giant Rock-a-Stack',
+    category_id:6,
+    price: 15.97,
+    seller_id: 7
+)
+if !product35.photo.attached?
+    product35.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/puzzle2.jpg"), filename: "35.jpg")
+end
+
+product36 = Product.find_or_create_by(
+    product_name: 'Soft Toys',
+    description: 'Fluffuns Teddy Bear Plush - Cute Teddy Bears Stuffed Animals in 3 Colors - 3-Pack of Stuffed Bears - 9 Inch Height (Dark Brown, Golden, White)',
+    category_id:6,
+    price: 25.88,
+    seller_id: 8
+)
+if !product36.photo.attached?
+    product36.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/teddy1.jpg"), filename: "36.jpg")
+end

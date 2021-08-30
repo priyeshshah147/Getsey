@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import ProductPiece from './product_piece';
+import ProductIndexContainer from '../product/product_index_container';
 
 class Splash extends React.Component{
     // constructor(props){
@@ -17,20 +18,22 @@ class Splash extends React.Component{
             <div>
                 <div className="first-layer">
                     <div className='first-layer-title'>
-                        <p className="title">Made in the USA</p>
+                        <p className="front-title">Toys, Made in the USA</p>
                     </div>
                     <ul className='first-layer-images'>
-                        
-                            <ProductPiece product={products.slice(3,4)} title="For her" />
-                            <ProductPiece product={products.slice(7,8)} title="For him" />
-                            <ProductPiece product={products.slice(11,12)} title="For kids" />
-                            <ProductPiece product={products.slice(15,16)} title="Home essentials" />
-                            <ProductPiece product={products.slice(19,20)} title="Collectables" />
-                            <ProductPiece product={products.slice(23,24)} title="For everyone" />
-                        
+                        <ProductPiece product={products.slice(30,31)} />
+                        <ProductPiece product={products.slice(31,32)} />
+                        <ProductPiece product={products.slice(32,33)} />
+                        <ProductPiece product={products.slice(33,34)} />
+                        <ProductPiece product={products.slice(34,35)} />
+                        <ProductPiece product={products.slice(35,36)}  />  
                     </ul>
+                </div >
 
+                <div className="second-layer">
+                    
                 </div>
+                {/* <ProductIndexContainer/> */}
             </div>
         )
     }

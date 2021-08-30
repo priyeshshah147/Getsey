@@ -19,6 +19,7 @@ export default () => (
       </header>
       <div>
           <Route exact path="/" component={SplashContainer}/>
+          <Route exact path="/all" component={ProductIndexContainer}/>
           <Route exact path="/products/:productId"component={ProductShowContainer}/>
           <Route exact path="/reviews/:reviewId/update" component={UpdateFormContainer}/> 
       </div>
