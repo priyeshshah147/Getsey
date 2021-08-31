@@ -6,9 +6,21 @@ class User < ApplicationRecord
     attr_reader :password
     after_initialize :ensure_session_token
 
+    has_many :products,
+    foreign_key: :seller_id,
+    class_name: :Product
+
     has_many :reviews, 
     foreign_key: :reviewer_id, 
     class_name: :Review
+
+    has_many :cart_items,
+    foreign_key: :user_id,
+    class_name: :CartItem
+
+    has_many :products,
+    through: :cart_items,
+    source: :product
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
