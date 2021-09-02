@@ -1,9 +1,14 @@
- json.products do 
-    json.set! @product.id do
-        json.extract! @product, :id, :product_name, :price, :seller_id, :description
-        json.image url_for(@product.photo)
-    end
-end
+#  json.products do 
+#     json.set! @product.id do
+#         json.extract! @product, :id, :product_name, :price, :seller_id, :description
+#         json.image url_for(@product.photo)
+#     end
+# end
+
+json.partial! "api/products/product", product: @product
+
+json.image url_for(@product.photo)
+
 
 json.reviews do
     @product.reviews.each do |review|

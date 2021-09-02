@@ -2,10 +2,11 @@ import { RECEIVE_PRODUCT, RECEIVE_PRODUCTS, RECEIVE_PRODUCT_ERRORS} from "../act
 
 const productReducer = (state={}, action) => {
     Object.freeze(state);
+    let nextState = Object.assign({}, state);
     switch(action.type){
         case RECEIVE_PRODUCT:
-            
-            return Object.assign({}, state, action.product);
+            nextState[action.product.id] = action.product;
+            return nextState;
         case RECEIVE_PRODUCTS:
             return action.products;
         case RECEIVE_PRODUCT_ERRORS:
