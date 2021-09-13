@@ -5,13 +5,19 @@ import ReviewIndexContainer from '../review/review_index_container';
 class ProductShow extends React.Component {
    constructor(props){
        super(props)
-    
+    this.handleClick = this.handleClick.bind(this)
    }
    componentDidMount(){
        
        this.props.fetchProduct(this.props.match.params.productId),
        this.props.fetchReviews(this.props.match.params.productId)
 
+   }
+
+   handleClick(e){
+       e.preventDefault();
+        const {addCartItem, currentUser} = this.props;
+        addCartItem(this.props.product)
    }
   render(){
       const {product} = this.props
@@ -25,7 +31,7 @@ class ProductShow extends React.Component {
                                 <li className="product-name-show">{product.product_name}</li>
                                 <li className="product-description-show">{product.description}</li>
                                 <li className="product-price-show">${product.price}</li>
-                                <button className="cart-show">Add to cart</button>
+                                <button onClick={this.handleClick} className="cart-show">Add to cart</button>
                                 </ul>
                                 
                             </div>

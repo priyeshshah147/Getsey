@@ -5,25 +5,28 @@ export const fetchCartitems = () => {
     })
 };
 
-export const createCartitem = cartitem => {
+export const updateCartitem = (cartitem) => {
     return $.ajax({
-        method: 'POST', 
-        url: `/api/cartitems`,
-        data: cartitem
+        method: 'PATCH',
+        url: `/api/cartitems/${cartitem.id}`,
+        data: {cartitem}
     })
 }
 
-export const removeCartitem = cartitemId => {
+export const removeCartitem = (cartitemId) => {
     return $.ajax({
         method: 'DELETE',
         url: `/api/cartitems/${cartitemId}`
     })
 }
 
-export const updateCartitem = (cartitem) => {
+export const addSingleItem = (cartitem) => {
     return $.ajax({
-        method: 'PATCH',
-        url: `/api/cartitems/${cartitem.id}`,
-        data: cartitem
+        method: 'POST', 
+        url: `/api/cartitems`,
+        data: {cartitem}
     })
 }
+
+
+

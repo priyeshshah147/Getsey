@@ -8,7 +8,7 @@ export default ({ currentUser, logout, openModal }) => {
 
 const display = currentUser ? (
     <div className="arrange-button">
-      <div><FaShoppingCart/></div>
+      <Link to={'/cart'}><div><FaShoppingCart/></div></Link>
       <button className="logout-button-nav" onClick={logout}>Logout</button>
       <h3 className="profile-name">Welcome {currentUser.username}</h3>
     </div>

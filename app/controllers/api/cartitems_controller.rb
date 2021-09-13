@@ -10,15 +10,6 @@ class Api::CartitemsController < ApplicationController
         end
     end
 
-    def create 
-        @cartitem = CartItem.new(cartitem_params)
-        if @cartitem.save && logged_in?
-            redirect_to action: 'index'
-        else
-            render json: @cartitem.errors.full_messages, status: 404
-        end
-    end
-
     def update
         if logged_in?
             @cartitem = CartItem.find_by(id: params[:id])
@@ -35,11 +26,35 @@ class Api::CartitemsController < ApplicationController
         if logged_in?
             @cartitem = CartItem.find_by(id: params[:id])
             if @cartitem.destroy
-                @cartitems = Cartitem.all.select {|item| item.user_id == current_user.id}
+                @cartitems = CartItem.all.select {|item| item.user_id == current_user.id}
                 render :index
             end
         else
             render json: @cartitem.errors.full_messages, status: 404
+        end
+    end
+
+    def create 
+        allCartitems = CartItem.all.select{|item| item.user_id == current_user.id}
+        @cartitem = CartItem.new(cartitem_params);
+        hash = {};
+        allCartitems.map{|cartitem| hash[cartitem.product_id] = cartitem.id}
+        if hash.keys.include?(@cartitem.product_id)
+            @existingcartitem = CartItem.find_by(id: hash[@cartitem.product_id])
+            @existingcartitem.quantity = @existingcartitem.quantity + @cartitem.quantity
+            if @existingcartitem.save && logged_in?
+                @cartitems = CartItem.all.select{|item| item.user_id == current_user.id}
+                render :index
+            else
+                render json: @cartitem.errors.full_messages, status: 404
+            end
+        else
+            if @cartitem.save && logged_in?
+                @cartitems = CartItem.all.select{|item| item.user_id == current_user.id}
+                render :index
+            else
+                render json: @cartitem.errors.full_messages, status: 404
+            end
         end
     end
 
@@ -48,5 +63,6 @@ class Api::CartitemsController < ApplicationController
     def cartitem_params
         params.require(:cartitem).permit(:product_id, :user_id, :quantity)
     end
+
 
 end

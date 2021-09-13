@@ -1,20 +1,24 @@
 import { LOGOUT_CURRENT_USER } from "../actions/session_actions";
-import { RECEIVE_ITEMS, REMOVE_ITEM } from "../actions/cartitem_actions";
+import { ADD_CARTITEM, REMOVE_CARTITEM, RECEIVE_ALL_CARTITEMS, RECEIVE_CARTITEM_ERRORS } from "../actions/cartitem_actions";
 
-const cartItemsReducer = (state = {}, action) => {
+const cartitemReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type){
-        case RECEIVE_ITEMS:
-            return action.items;
-        case REMOVE_ITEM:
+        case RECEIVE_ALL_CARTITEMS:
+            return action.cartitems;
+        case ADD_CARTITEM:
+            return Object.assign({}, state, {[action.cartitem.id]: action.cartitem})
+        case REMOVE_CARTITEM:
             const newState = Object.assign({}, state);
-            delete newState[action.itemId];
+            delete newState[action.cartitemId];
             return newState;
         case LOGOUT_CURRENT_USER:
             return {};
+        case RECEIVE_CARTITEM_ERRORS:
+            return null;
         default:
             return state;
     }
 }
 
-export default cartItemsReducer;
+export default cartitemReducer;

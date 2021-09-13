@@ -12,12 +12,12 @@ class Product < ApplicationRecord
     foreign_key: :product_id, 
     class_name: :Review
 
-    has_many :carts,
+    has_many :cartitems,
     foreign_key: :product_id,
     class_name: :CartItem
 
     has_many :buyers,
-    through: :carts,
+    through: :cartitems,
     source: :user
 
     def average_rating

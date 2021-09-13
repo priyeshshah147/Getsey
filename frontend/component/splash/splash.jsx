@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import ProductPiece from './product_piece';
 import ProductSlice from './product_slice';
-// import ProductIndexContainer from '../product/product_index_container';
+import ProductIndexContainer from '../product/product_index_container';
 
 class Splash extends React.Component{
   
@@ -39,6 +39,10 @@ class Splash extends React.Component{
                     <h3 className="splash-mini-title">Other Items</h3>
                     <ProductSlice  products={products.slice(24,30)}/>
                 </div>
+
+                {/* <div>
+                    <ProductIndexContainer/>
+                </div> */}
                 
             </div>
         )
