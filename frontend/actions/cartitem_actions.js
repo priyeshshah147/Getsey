@@ -45,7 +45,8 @@ export const fetchAllitems = () => dispatch=> {
 export const addItem = cartitem => dispatch => {
     return CartitemsApiUtil.addSingleItem(cartitem)
     .then(cartitem => dispatch(addCartitem(cartitem)), 
-    error => dispatch(receiveCartitemsErrors(error.responseJSON)))
+    // error => dispatch(receiveCartitemsErrors(error.responseJSON))
+    )
 } 
 
 

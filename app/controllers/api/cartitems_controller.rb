@@ -2,6 +2,7 @@ class Api::CartitemsController < ApplicationController
     before_action only: [:index, :update, :destroy]
 
     def index
+        debugger
         if logged_in?
             @cartitems = CartItem.all.select{|item| item.user_id == current_user.id}
             render 'api/cartitems/index'
@@ -35,27 +36,27 @@ class Api::CartitemsController < ApplicationController
     end
 
     def create 
-        allCartitems = CartItem.all.select{|item| item.user_id == current_user.id}
+        # allCartitems = CartItem.all.select{|item| item.user_id == current_user.id}
         @cartitem = CartItem.new(cartitem_params);
-        hash = {};
-        allCartitems.map{|cartitem| hash[cartitem.product_id] = cartitem.id}
-        if hash.keys.include?(@cartitem.product_id)
-            @existingcartitem = CartItem.find_by(id: hash[@cartitem.product_id])
-            @existingcartitem.quantity = @existingcartitem.quantity + @cartitem.quantity
-            if @existingcartitem.save && logged_in?
-                @cartitems = CartItem.all.select{|item| item.user_id == current_user.id}
-                render :index
-            else
-                render json: @cartitem.errors.full_messages, status: 404
-            end
-        else
-            if @cartitem.save && logged_in?
-                @cartitems = CartItem.all.select{|item| item.user_id == current_user.id}
-                render :index
-            else
-                render json: @cartitem.errors.full_messages, status: 404
-            end
-        end
+        # hash = {};
+        # allCartitems.map{|cartitem| hash[cartitem.product_id] = cartitem.id}
+        # if hash.keys.include?(@cartitem.product_id)
+        #     @existingcartitem = CartItem.find_by(id: hash[@cartitem.product_id])
+        #     @existingcartitem.quantity = @existingcartitem.quantity + @cartitem.quantity
+        #     if @existingcartitem.save && logged_in?
+        #         @cartitems = CartItem.all.select{|item| item.user_id == current_user.id}
+        #         render :index
+        #     else
+        #         render json: @cartitem.errors.full_messages, status: 404
+        #     end
+        # else
+            # if @cartitem.save && logged_in?
+            #     @cartitems = CartItem.all.select{|item| item.user_id == current_user.id}
+            #     render :index
+            # else
+            #     render json: @cartitem.errors.full_messages, status: 404
+            # end
+        # end
     end
 
     private

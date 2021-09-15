@@ -15,9 +15,9 @@ class ProductShow extends React.Component {
    }
 
    handleClick(e){
-       e.preventDefault();
-        const {addCartItem, currentUser} = this.props;
-        addCartItem(this.props.product)
+        e.preventDefault();
+        // const {addCartItem, currentUser} = this.props;
+        this.props.addItem({user_id: this.props.currentUser.id, product_id: this.props.product.id, quantity:1})
    }
   render(){
       const {product} = this.props

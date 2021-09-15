@@ -7,8 +7,6 @@ export const RECEIVE_PRODUCT_ERRORS = 'RECEIVE_PRODUCT_ERRORS';
 export const receiveProduct = (product) => ({
     type: RECEIVE_PRODUCT, 
     product,
-
-
 })
 
 export const receiveProducts = (products) => ({

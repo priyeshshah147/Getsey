@@ -40,9 +40,29 @@ class Splash extends React.Component{
                     <ProductSlice  products={products.slice(24,30)}/>
                 </div>
 
-                {/* <div>
-                    <ProductIndexContainer/>
+              
+                {/* <div className="third-layer">
+                    <div className="third-layer-parts">
+                        <ProductPiece product={products.slice(30,31)} />
+                        <ProductPiece product={products.slice(31,32)} />
+                    </div>
+                    <div className="third-layer-parts">
+                        <ProductPiece product={products.slice(30,31)} />
+                        <ProductPiece product={products.slice(31,32)} />
+                    </div>
+                    <div className="third-layer-parts">
+                        <ProductPiece product={products.slice(30,31)} />
+                        <ProductPiece product={products.slice(31,32)} />
+                    </div>
+                    <div className="third-layer-parts">
+                        <ProductPiece product={products.slice(30,31)} />
+                        <ProductPiece product={products.slice(31,32)} />
+                    </div>
+
                 </div> */}
+                    
+                    
+               
                 
             </div>
         )

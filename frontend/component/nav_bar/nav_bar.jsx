@@ -42,6 +42,7 @@ const display = currentUser ? (
       </div>
       {/* <div> */}
       <CategoryNavContainer/>
+      <p className="line-divider"></p>
 
 {/* </div> */}
 
