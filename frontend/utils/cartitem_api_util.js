@@ -1,14 +1,14 @@
 export const fetchCartitems = () => {
     return $.ajax({
         method: 'GET', 
-        url: `/api/cartitems`
+        url: `/api/cart_items`
     })
 };
 
 export const updateCartitem = (cartitem) => {
     return $.ajax({
         method: 'PATCH',
-        url: `/api/cartitems/${cartitem.id}`,
+        url: `/api/cart_items/${cartitem.id}`,
         data: {cartitem}
     })
 }
@@ -16,14 +16,14 @@ export const updateCartitem = (cartitem) => {
 export const removeCartitem = (cartitemId) => {
     return $.ajax({
         method: 'DELETE',
-        url: `/api/cartitems/${cartitemId}`
+        url: `/api/cart_items/${cartitemId}`
     })
 }
 
 export const addSingleItem = (cartitem) => {
     return $.ajax({
         method: 'POST', 
-        url: `/api/cartitems`,
+        url: `/api/cart_items`,
         data: {cartitem}
     })
 }

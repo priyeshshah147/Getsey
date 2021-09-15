@@ -1,9 +1,9 @@
-cartitems.each do |item|
+@cartitems.each do |item|
     json.set! item.id do 
-        json.partial! '/api/cartitems/cartitem', cartitem: item
+        json.partial! '/api/cart_items/cart_item', cartitem: item
         json.extract! item.product, :product_name, :price, :seller_id
         json.photoUrl url_for(item.product.photo)
-        json.extract! item.product.seller, :username 
+        # json.extract! item.product.seller, :username 
     end
 end
 # @cart_items.each do |cart_item|
