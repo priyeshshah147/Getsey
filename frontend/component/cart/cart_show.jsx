@@ -27,10 +27,17 @@ class CartShow extends React.Component {
             {label: 13, value:13},
             
         ]
+
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     componentDidMount(prevProps, prevState){
 
+    }
+
+    handleDelete(e){
+        e.preventDefault();
+        this.props.removeItem(this.props.cartItem)
     }
 
     
@@ -41,17 +48,34 @@ class CartShow extends React.Component {
     render(){
         let quantity = this.props.quantity
         let totalPrice = (quantity * this.props.price)
-        let item = {id: this.propscartItem, user:this.props.user, product: this.props.id, quantity: this.state.quantity.value}
+        let eachPrice = this.props.price * 1.00
+        let item = {id: this.props.cartItem, user:this.props.user, product:this.props.id, quantity:this.state.quantity.value,
+             description: this.props.description
+        }
         
 
         return (
             <li className="cart-index-item" key={this.props.id}>
                 <div className="item-index">
-                    <div>
+                    <div className="cart-item-section-1">
                         <Link to={`/products/${this.props.id}`}><img className="cart-show-image" src={this.props.photo}/></Link>
                     </div>
-                    <div>
-                        {item.quantity}
+                    <div className="cart-item-section-2">
+                        <div className="cart-item-description">{this.props.description}</div>
+                        <div><button className="cart-remove-item" onClick={this.handleDelete}>Remove</button></div>
+                        
+                    </div>
+                    <div className="cart-item-section-3">
+                        <div className="cart-item-section-3a">
+                            <div className="cart-item-quantity">{item.quantity}</div>
+                            <div className="cart-item-prices">
+                                <div className="item-total-price">${totalPrice.toFixed(2)}</div>
+                                <div className="item-each-price">(${eachPrice.toFixed(2)} each)</div>
+                            </div>
+                        </div>
+                        <div className="over-20-people">
+                            Over 20 people have this in their cart
+                        </div>
                     </div>
                 </div>
 

@@ -2,10 +2,10 @@ class Api::CartItemsController < ApplicationController
     before_action only: [:index, :update, :destroy]
 
     def index
-        debugger
+        # debugger
         if logged_in?
             @cartitems = CartItem.all.select{|item| item.user_id == current_user.id}
-            render 'api/cartitems/index'
+            render :index
         else
             return nil
         end
@@ -26,9 +26,12 @@ class Api::CartItemsController < ApplicationController
     def destroy
         if logged_in?
             @cartitem = CartItem.find_by(id: params[:id])
-            if @cartitem.destroy
+            if @cartitem
+                @cartitem.destroy
                 @cartitems = CartItem.all.select {|item| item.user_id == current_user.id}
                 render :index
+            # else
+            #     render json: @cartitem.errors.full_messages, status: 404 
             end
         else
             render json: @cartitem.errors.full_messages, status: 404

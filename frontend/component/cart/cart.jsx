@@ -15,6 +15,10 @@ class Cart extends React.Component{
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 
+    componentDidMount(){
+        this.props.fetchAllitems()
+    }
+
     render(){
         const {items, removeItem, updateItem, products, addItem, user} = this.props;
         if(items.length === 0){
@@ -39,8 +43,8 @@ class Cart extends React.Component{
         }else {
             return(
                 <div className="all-cart-items">
-                    <div className='cart-first-layer'>
-                        <div className="Hello">{items.length} items in your cart</div>
+                    <div className='cart-first-layer'> 
+                        <div className="items-in-cart">{items.length} items in your cart</div>
                         <Link to="/" className="keep-shopping"><div className="keep-shopping">Keep shopping</div></Link>
                     </div>
                     <div className="cart-index-items">
@@ -48,11 +52,20 @@ class Cart extends React.Component{
                             {
                                 items.map(item => (
                                     <CartShow key={this.randomKeyNum()} user={user} quantity={item.quantity} 
-                                    name={item.product_name} price={item.price} photo={item.photoUrl} id={item.product_id} 
+                                    name={item.product_name} price={item.price} photo={item.photoUrl} id={item.product_id} description={item.description}
                                     cartItem={item.id} removeItem={removeItem} total={total.toFixed(2)} updateItem = {updateItem } seller = {item.seller_id}/>
                                 ))
                             }
                         </ul>
+                        
+                        <div className="how-you-pay-container">
+                            <div className="how-you-pay">
+                                How you'll pay
+                            </div>
+
+                            {/* <button>Remove all</button> */}
+
+                        </div>
 
                     </div>
                 </div>
