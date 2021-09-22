@@ -1,6 +1,7 @@
 import React from 'react';
 import CartShow from './cart_show';
 import {Link} from 'react-router-dom';
+import { Icon } from '@iconify/react';
 import product_index_container from '../product/product_index_container';
 
 class Cart extends React.Component{
@@ -28,7 +29,10 @@ class Cart extends React.Component{
                     <Link to="/" className="cart-to-home">
                         <p> Discover something unique to fill it up</p>
                     </Link>
-                    <p>Getsey offsets carbon emissions from every delivery</p>
+                    <div className="carbon-emission">
+                        <Icon icon="entypo:leaf" />
+                        <div className="text-carbon-emission">Getsey offsets carbon emissions from every delivery</div>
+                    </div>
                 </div>
             )
         }
@@ -67,6 +71,10 @@ class Cart extends React.Component{
 
                         </div>
 
+                    </div>
+                    <div className="carbon-emission">
+                        <div><Icon icon="entypo:leaf" /></div>
+                        <div className="text-carbon-emission">Getsey offsets carbon emissions from every delivery</div>
                     </div>
                 </div>
             )

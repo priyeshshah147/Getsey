@@ -1,5 +1,5 @@
 import React from 'react';
-// import Select from 'react-select';
+import {Icon} from '@iconify/react';
 import { Link} from 'react-router-dom';
 
 class CartShow extends React.Component {
@@ -77,6 +77,26 @@ class CartShow extends React.Component {
                             Over 20 people have this in their cart
                         </div>
                     </div>
+                </div>
+                <div classNam="item-index-2">
+                    <div className="item-index-2a">
+                        <div className="item-index-2a-1">
+                            <div className="item-index-2a-1a"><input type="checkbox"/>This order is a gift</div>
+                            <div className="item-index-2a-1b ">Prices will not be shown on packing slip</div>
+                        </div>
+                        <div className="item-index-2a-2">
+                            <Icon icon="pepicons:label" hFlip={true} /> 
+                            <div className="coupon-text">Apply shop coupon codes</div>
+                        </div>
+
+                    </div>
+                    <div className="item-index-2b">
+                        <textarea className="cart-item-textbox">
+                            Add a note (optional)
+                        </textarea>
+
+                    </div>
+                    <p className="line-divider-cart"></p>
                 </div>
 
             </li>
