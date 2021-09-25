@@ -75,21 +75,6 @@
     flex:2.5;
 }
 
-.how-you-pay-container{
-    margin-left: 20px;
-    flex:1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    
-}
-
-.how-you-pay{
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgb(218, 218, 218);
-}
-
 .cart-item-description{
     padding-left: 10px;
     padding-bottom: 20px;
@@ -228,4 +213,40 @@
 .text-carbon-emission{
     padding-bottom: 5px;
     font-weight: lighter;
+}
+
+
+.how-you-pay-container{
+    margin-left: 20px;
+    flex:1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+    
+}
+
+.how-you-pay-container2{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(218, 218, 218);
+    padding: 20px;
+}
+
+// .how-you-pay{
+    
+// }
+
+.pay-img{
+    height: 30px;
+    width: 45px;
+    object-fit:scale-down;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+
+.container{
+    height: 30px;
+    width: 30px;
 }

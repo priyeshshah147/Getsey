@@ -63,10 +63,19 @@ class Cart extends React.Component{
                         </ul>
                         
                         <div className="how-you-pay-container">
-                            <div className="how-you-pay">
-                                How you'll pay
-                            </div>
+                            <div className="how-you-pay-container2">
+                                <div className="how-you-pay">
+                                    How you'll pay
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" className="container" />
+                                    <Icon className="pay-img" icon="grommet-icons:mastercard" />
+                                    <Icon className="pay-img" icon="logos:visa" />
+                                    <Icon className="pay-img" icon="fontisto:american-express" color="blue" />
+                                    <Icon className="pay-img" icon="logos:discover" color="blue" />
 
+                                </div>
+                            </div>
                             {/* <button>Remove all</button> */}
 
                         </div>
