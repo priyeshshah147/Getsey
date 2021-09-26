@@ -126,7 +126,7 @@
     font-weight: bold;
     padding-bottom: 3px;
 }
-.item-each-price, .item-index-2a-1b{
+.item-each-price, .item-index-2a-1b, .klarna-text{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
 
@@ -218,7 +218,7 @@
 
 .how-you-pay-container{
     margin-left: 20px;
-    flex:1;
+    flex:1.2;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -233,20 +233,82 @@
     padding: 20px;
 }
 
-// .how-you-pay{
-    
-// }
 
 .pay-img{
-    height: 30px;
-    width: 45px;
-    object-fit:scale-down;
+    height: 25px;
+    width: 40px;
+    object-fit:inherit;
     border: 1px solid lightgray;
     border-radius: 3px;
     margin-right: 3px;
+    padding: 5px;
 }
 
-.container{
-    height: 30px;
-    width: 30px;
+
+
+.radio-container{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 22px;
+    user-select: none;
+    padding-left: 35px;
+    padding-bottom: 5px;
+}
+
+.radio-container input {
+    display: none;
+}
+
+.radio-container .circle{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: white ;
+    border: 2px solid rgb(209, 209, 209);
+    position: absolute;
+    left: 0;
+    top: 7%;
+    border-radius: 50%;
+}
+
+.radio-container input:checked + .circle{
+    background-color: black;
+}
+
+.radio-container input:checked + .circle:after{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+
+}
+
+.klarna-text-align{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.klarna-text{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.payment-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text-right{
+    text-align: right;
 }

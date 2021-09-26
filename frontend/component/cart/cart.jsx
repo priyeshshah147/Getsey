@@ -38,8 +38,27 @@ class Cart extends React.Component{
         }
 
         let total = 0
+        let grandTotal = 0
+        let shippingPrice;
+        let itemDisplay;
         items.forEach(item => total += (parseFloat(item.price) * parseFloat(item.quantity)))
         let quarter = total/4
+        let discount = total * 0.10
+        let netTotal = total - discount
+        if (netTotal > 50){
+            shippingPrice = "FREE"
+            grandTotal = netTotal 
+        }else {
+            shippingPrice = "$4.99"
+            grandTotal = netTotal + 4.99 
+        }
+
+        if(items.length > 1){
+            itemDisplay = "items"
+        }else{
+            itemDisplay = "item"
+        }
+
         if(!items){
             return(
                 <div>Fetching items...</div>
@@ -48,7 +67,7 @@ class Cart extends React.Component{
             return(
                 <div className="all-cart-items">
                     <div className='cart-first-layer'> 
-                        <div className="items-in-cart">{items.length} items in your cart</div>
+                        <div className="items-in-cart">{items.length} {itemDisplay} in your cart</div>
                         <Link to="/" className="keep-shopping"><div className="keep-shopping">Keep shopping</div></Link>
                     </div>
                     <div className="cart-index-items">
@@ -67,14 +86,63 @@ class Cart extends React.Component{
                                 <div className="how-you-pay">
                                     How you'll pay
                                 </div>
-                                <div>
-                                    <input type="radio" name="radio" className="container" />
-                                    <Icon className="pay-img" icon="grommet-icons:mastercard" />
-                                    <Icon className="pay-img" icon="logos:visa" />
-                                    <Icon className="pay-img" icon="fontisto:american-express" color="blue" />
-                                    <Icon className="pay-img" icon="logos:discover" color="blue" />
+                                <div className="radio-container-main">
+                                    <label className="radio-container">
+                                        <input type="radio" name="radio" className="container" defaultChecked/>
+                                        <span className="circle"></span>
+                                        <Icon className="pay-img" icon="grommet-icons:mastercard" />
+                                        <Icon className="pay-img" icon="logos:visa" />
+                                        <Icon className="pay-img" icon="fontisto:american-express" color="blue" />
+                                        <Icon className="pay-img" icon="logos:discover" color="blue" />
 
+                                    </label>
+                                    
+                                    <br/>
+                                    <label className="radio-container">
+                                        <input type="radio" name="radio" className="container"/>
+                                        <span className="circle"></span>
+                                        <Icon className="pay-img" icon="logos:paypal" color="blue" />
+                                    </label>
+
+                                    <br/>
+                                    <label className="radio-container">
+                                        <input type="radio" name="radio" className="container"/>
+                                        <span className="circle"></span>
+                                        <div className="klarna-text-align">
+                                            <img className="pay-img" src={window.klarna}/>
+                                            <p className="klarna-text"> 4 interest-free installments</p>
+                                        </div>
+                                        
+                                        <p className="klarna-text">
+                                            Pay in 4 installments of ${quarter.toFixed(2)} . Klarna. Learn more
+                                        </p>
+                                    </label>
+                                    
                                 </div>
+                                <div className="payment-section">
+                                    <div>Item(s) Total</div>
+                                    <div className="text-right">${total.toFixed(2)}</div>
+                                </div>
+                                <div className="payment-section">
+                                    <div>Shop discount</div>
+                                    <div className="text-right">-${discount.toFixed(2)}</div>
+                                </div>
+
+                                <div className="payment-section">
+                                    <div>Subtotal</div>
+                                    <div className="text-right">${netTotal.toFixed(2)}</div>
+                                </div>
+
+                                <div className="payment-section">
+                                    <div>Shipping</div>
+                                    <div className="text-right">{shippingPrice}</div>
+                                </div>
+
+                                <div className="payment-section">
+                                    <div>Total ({items.length} {itemDisplay})</div>
+                                    <div className="text-right">{grandTotal.toFixed(2)}</div>
+                                </div>
+
                             </div>
                             {/* <button>Remove all</button> */}
 

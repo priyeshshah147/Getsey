@@ -70,7 +70,7 @@ class CartShow extends React.Component {
                             <div className="cart-item-quantity">{item.quantity}</div>
                             <div className="cart-item-prices">
                                 <div className="item-total-price">${totalPrice.toFixed(2)}</div>
-                                <div className="item-each-price">(${eachPrice.toFixed(2)} each)</div>
+                                <div className="item-each-price text-right">(${eachPrice.toFixed(2)} each)</div>
                             </div>
                         </div>
                         <div className="over-20-people">
