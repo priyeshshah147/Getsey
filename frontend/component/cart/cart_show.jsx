@@ -31,10 +31,6 @@ class CartShow extends React.Component {
         this.handleDelete = this.handleDelete.bind(this)
     }
 
-    componentDidMount(prevProps, prevState){
-
-    }
-
     handleDelete(e){
         e.preventDefault();
         this.props.removeItem(this.props.cartItem)

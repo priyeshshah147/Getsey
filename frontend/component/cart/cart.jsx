@@ -7,7 +7,15 @@ import product_index_container from '../product/product_index_container';
 class Cart extends React.Component{
     constructor(props){
         super(props)
-        // this.handleCheckout = this.handleCheckout.bind(this);
+        this.handleCheckout = this.handleCheckout.bind(this);
+    }
+
+    handleCheckout(e){
+      e.preventDefault();
+      this.props.items.map(item => {
+          this.props.removeItem(item.id)
+      })
+      alert('Thank you for shopping with Getsey')
     }
 
     randomKeyNum(){
@@ -83,7 +91,7 @@ class Cart extends React.Component{
                         
                         <div className="how-you-pay-container">
                             <div className="how-you-pay-container2">
-                                <div className="how-you-pay">
+                                <div className="payment-text text-bold">
                                     How you'll pay
                                 </div>
                                 <div className="radio-container-main">
@@ -114,43 +122,57 @@ class Cart extends React.Component{
                                         </div>
                                         
                                         <p className="klarna-text">
-                                            Pay in 4 installments of ${quarter.toFixed(2)} . Klarna. Learn more
+                                            Pay in 4 installments of ${quarter.toFixed(2)} . <b className="thick">Klarna.</b> <u>Learn more</u>
                                         </p>
+                                        <br/>
                                     </label>
                                     
                                 </div>
                                 <div className="payment-section">
-                                    <div>Item(s) Total</div>
-                                    <div className="text-right">${total.toFixed(2)}</div>
+                                    <div className="payment-text text-bold">Item(s) total</div>
+                                    <div className="payment-text text-right">${total.toFixed(2)}</div>
                                 </div>
                                 <div className="payment-section">
-                                    <div>Shop discount</div>
-                                    <div className="text-right">-${discount.toFixed(2)}</div>
+                                    <div className="payment-text text-bold">Shop discount</div>
+                                    <div className="payment-text text-right">-${discount.toFixed(2)}</div>
+                                </div>
+
+                                <p className="line-divider-payment"></p>
+
+                                <div className="payment-section">
+                                    <div className="payment-text">Subtotal</div>
+                                    <div className="payment-text text-right">${netTotal.toFixed(2)}</div>
                                 </div>
 
                                 <div className="payment-section">
-                                    <div>Subtotal</div>
-                                    <div className="text-right">${netTotal.toFixed(2)}</div>
+                                    <div className="payment-text">Shipping</div>
+                                    <div className="payment-text text-right">{shippingPrice}</div>
                                 </div>
 
-                                <div className="payment-section">
-                                    <div>Shipping</div>
-                                    <div className="text-right">{shippingPrice}</div>
-                                </div>
+                                <p className="line-divider-payment"></p>
 
                                 <div className="payment-section">
-                                    <div>Total ({items.length} {itemDisplay})</div>
-                                    <div className="text-right">{grandTotal.toFixed(2)}</div>
+                                    <div className="payment-text text-bold">Total ({items.length} {itemDisplay})</div>
+                                    <div className="payment-text text-bold text-right">${grandTotal.toFixed(2)}</div>
+                                </div>
+                                <button onClick={this.handleCheckout} className="checkout-button">Proceed to checkout</button>
+
+                                <div className="text-tax">
+                                * Additional duties and taxes <u>may apply</u>
+
                                 </div>
 
                             </div>
-                            {/* <button>Remove all</button> */}
+                            <div className="text-eco">
+                                The Uplift Fund supports nonprofits that provide resources to creative entrepreneurs in communities that need it most. You can donate your change at Checkout.
 
+                            </div>
+                            
                         </div>
 
                     </div>
                     <div className="carbon-emission">
-                        <div><Icon icon="entypo:leaf" /></div>
+                        <div><Icon icon="entypo:leaf"/></div>
                         <div className="text-carbon-emission">Getsey offsets carbon emissions from every delivery</div>
                     </div>
                 </div>
