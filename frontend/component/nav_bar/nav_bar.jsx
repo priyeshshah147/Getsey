@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {FaSearch, FaShoppingCart} from 'react-icons/fa';
+import {FaShoppingCart} from 'react-icons/fa';
 import CategoryNavContainer from '../category/category_container';
-
+import SearchContainer from '../search/search_container';
 
 export default ({ currentUser, logout, openModal }) => {
 
@@ -29,12 +29,9 @@ const display = currentUser ? (
           <img className="logo" src="https://getsey-seeds.s3.us-east-2.amazonaws.com/getsey+logo.jpg"/>
           </div> 
         </Link>
-        <div className="merger">
-            <input className="search-box" placeholder="Search for anything" type="text"/>
-            <button className="search-button">
-              <FaSearch/>
-            </button>
-        </div>
+
+        <SearchContainer/>
+
 
         <div>
           {display}
