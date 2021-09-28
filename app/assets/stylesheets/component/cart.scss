@@ -37,6 +37,9 @@
     font-weight: bold;
     text-decoration: none;
     color: black;
+    padding: 8px;
+    border-radius: 30px;
+    border: none;
 }
 
 .item-index{
@@ -96,7 +99,7 @@
     border-radius: 30px;
 }
 
-.cart-remove-item:hover{
+.cart-remove-item:hover, .keep-shopping:hover{
     cursor: pointer;
     background-color: rgb(235, 235, 235);
 }
