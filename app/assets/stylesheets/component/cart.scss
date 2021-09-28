@@ -99,7 +99,7 @@
     border-radius: 30px;
 }
 
-.cart-remove-item:hover, .keep-shopping:hover{
+.cart-remove-item:hover, .keep-shopping:hover, .cart-icon:hover{
     cursor: pointer;
     background-color: rgb(235, 235, 235);
 }
@@ -396,4 +396,11 @@
 .qty-cart-page:hover{
     box-shadow: 0px 0px 10px 0px rgba(67, 66, 66, 0.1);
     border: 1px solid #7e7d7d;
+}
+
+.cart-icon{
+    color: black;
+    border: none;
+    padding: 7px;
+    border-radius: 50%;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {FaShoppingCart} from 'react-icons/fa';
+import { Icon } from '@iconify/react';
 import CategoryNavContainer from '../category/category_container';
 import SearchContainer from '../search/search_container';
 
@@ -8,7 +8,7 @@ export default ({ currentUser, logout, openModal }) => {
 
 const display = currentUser ? (
     <div className="arrange-button">
-      <Link to={'/cart'}><div><FaShoppingCart/></div></Link>
+      <Link to={'/cart'}><div className='cart-icon'><Icon icon="typcn:shopping-cart" width="28" /></div></Link>
       <Link to={'/'}><button className="logout-button-nav" onClick={logout}>Logout</button></Link>
       <h3 className="profile-name">Welcome {currentUser.username}</h3>
     </div>
