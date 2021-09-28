@@ -12,6 +12,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def update
+        # debugger
         if logged_in?
             @cartitem = CartItem.find_by(id: params[:id])
             if @cartitem.update(cartitem_params)

@@ -39,12 +39,13 @@ export const receiveCartitemErrors = errors => {
 export const fetchAllitems = () => dispatch=> {
     return CartitemsApiUtil.fetchCartitems()
     .then(cartitems => dispatch(receiveCartitems(cartitems)), 
-    error => dispatch(receiveCartitemsErrors(error.responseJSON)))
+    // error => dispatch(receiveCartitemsErrors(error.responseJSON))
+    )
 }
 
 export const addItem = cartitem => dispatch => {
     return CartitemsApiUtil.addSingleItem(cartitem)
-    .then(cartitems => dispatch(receiveCartitems(cartitems)), 
+    .then(cartitem => dispatch(receiveCartitems(cartitem)), 
     // error => dispatch(receiveCartitemsErrors(error.responseJSON))
     )
 } 
@@ -52,8 +53,9 @@ export const addItem = cartitem => dispatch => {
 
 export const updateItem = cartitem => dispatch => {
     return CartitemsApiUtil.updateCartitem(cartitem )
-    .then(cartitem => dispatch(addCartitem(cartitem)),
-    error => dispatch(receiveCartitemsErrors(error.responseJSON)))
+    .then(cartitems => dispatch(receiveCartitems(cartitems)),
+    // error => dispatch(receiveCartitemsErrors(error.responseJSON))
+    )
 }
 
 export const removeItem = cartitemId => dispatch => {

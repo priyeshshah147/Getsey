@@ -2,6 +2,7 @@ import React from 'react';
 import {Icon} from '@iconify/react';
 import { Link} from 'react-router-dom';
 
+
 class CartShow extends React.Component {
 
     constructor(props){
@@ -9,26 +10,12 @@ class CartShow extends React.Component {
         this.state = {
             user: this.props.user,
             product: this.props.id,
-            quantity: {label: this.props.quantity, value: this.props.quantity}
+            quantity: this.props.quantity
         }
-        this.options = [
-            {label: 1, value:1},
-            {label: 2, value:2},
-            {label: 3, value:3},
-            {label: 4, value:4},
-            {label: 5, value:5},
-            {label: 6, value:6},
-            {label: 7, value:7},
-            {label: 8, value:8},
-            {label: 9, value:9},
-            {label: 10, value:10},
-            {label: 11, value:11},
-            {label: 12, value:12},
-            {label: 13, value:13},
-            
-        ]
 
-        this.handleDelete = this.handleDelete.bind(this)
+        this.handleDelete = this.handleDelete.bind(this);
+        this.handleQtyChange = this.handleQtyChange.bind(this);
+        this.updateDB = this.updateDB.bind(this);
     }
 
     handleDelete(e){
@@ -36,18 +23,24 @@ class CartShow extends React.Component {
         this.props.removeItem(this.props.cartItem)
     }
 
-    
+    handleQtyChange(e){
+        e.preventDefault();
+        this.setState({quantity: parseInt(e.target.value)}, ()=>{
+            this.updateDB();
+        })
 
-    update(value){
-        this.setState({quantity:value})
     }
+
+    updateDB(){
+        this.props.updateItem({ product_id: this.props.id, user_id: this.props.item.user_id, quantity: this.state.quantity, id: this.props.cartItem})
+    }
+
+
     render(){
         let quantity = this.props.quantity
         let totalPrice = (quantity * this.props.price)
         let eachPrice = this.props.price * 1.00
-        let item = {id: this.props.cartItem, user:this.props.user, product:this.props.id, quantity:this.state.quantity.value,
-             description: this.props.description
-        }
+
         
 
         return (
@@ -63,7 +56,22 @@ class CartShow extends React.Component {
                     </div>
                     <div className="cart-item-section-3">
                         <div className="cart-item-section-3a">
-                            <div className="cart-item-quantity">{item.quantity}</div>
+                            <div className="cart-item-quantity">
+
+                            <select value={this.state.quantity} onChange={this.handleQtyChange} className="qty-cart-page">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            
+                            </div>
                             <div className="cart-item-prices">
                                 <div className="item-total-price">${totalPrice.toFixed(2)}</div>
                                 <div className="item-each-price text-right">(${eachPrice.toFixed(2)} each)</div>
@@ -87,9 +95,9 @@ class CartShow extends React.Component {
 
                     </div>
                     <div className="item-index-2b">
-                        <textarea className="cart-item-textbox">
-                            Add a note (optional)
-                        </textarea>
+                        <textarea className="cart-item-textbox" placeholder="Add a note"/>
+                    
+            
 
                     </div>
                     <p className="line-divider-cart"></p>

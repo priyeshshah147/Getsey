@@ -16,8 +16,12 @@ class ProductShow extends React.Component {
 
    handleClick(e){
         e.preventDefault();
-        // const {addCartItem, currentUser} = this.props;
-        this.props.addItem({user_id: this.props.currentUser.id, product_id: this.props.product.id, quantity:1})
+        if(!this.props.currentUser){
+            alert("Please sign in or sign up before adding product to the cart")
+        }else{
+            this.props.addItem({user_id: this.props.currentUser.id, product_id: this.props.product.id, quantity:1})
+            .then(this.props.history.push({pathname: '/cart', state: this.state}))
+        }
    }
   render(){
       const {product} = this.props
