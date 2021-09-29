@@ -32,7 +32,6 @@ const display = currentUser ? (
 
         <SearchContainer/>
 
-
         <div>
           {display}
         </div>

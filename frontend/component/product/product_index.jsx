@@ -19,6 +19,7 @@ class ProductIndex extends React.Component {
                                 product={product}
                                 key={product.id}
                             />
+                            
                         ))
                     }
                 </ul>
