@@ -23,8 +23,8 @@ class Search extends React.Component {
         document.removeEventListener("mousedown", this.handleClickOutside);
     }
     handleClickOutside(e){
-        if(this.container.current && !this.container.current.contains(e.target)){
-            this.setState({display: false});
+        if(this.container.current && !this.container.current.contains(e.target))
+        {this.setState({display: false});
         }
     }
 
@@ -35,13 +35,11 @@ class Search extends React.Component {
     }
 
     handleSelect(e){
-        e.preventDefault()
         const product_name = e.currentTarget.innerText;
         this.setState({inquiry: product_name, display: false})
     }
 
     handleInput(e){
-        // e.preventDefault();
         this.setState({inquiry: e.currentTarget.value})
     }
 
@@ -80,26 +78,19 @@ class Search extends React.Component {
         })
 
         return(
-            <div className = "search container" ref={this.container}>
+            <div className = "search-container" ref={this.container}>
                 
                     <input
                         type="text"
-                        className="search-box"
+                        className="search-input"
                         placeholder="Search for anything"
                         onChange={this.handleInput}
                         value={inquiry}
                         onFocus={this.toggleDisplay}
                     />
 
-                    {/* <div className="clr-btn-container">
-                        <button onClick={this.clearSearch}
-                        className={`clear-search-btn ${inquiry.length ? "" : "hidden"}`}>
-                            X
-                        </button>
-                    </div> */}
-
-                    <button className="search-button">
-                        <FaSearch/>
+                    <button className="search-btn">
+                        <FaSearch className="search-icon"/>
                     </button>
 
                     {this.state.display && (
@@ -107,7 +98,7 @@ class Search extends React.Component {
                             <ul className="results">
                                 {results}
                             </ul>
-                        </ul>
+                        </ul> 
                     )}
                 
             </div>
