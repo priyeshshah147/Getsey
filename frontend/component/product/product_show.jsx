@@ -34,7 +34,7 @@ class ProductShow extends React.Component {
                                 <ul>
                                 <li className="product-name-show">{product.product_name}</li>
                                 <li className="product-description-show">{product.description}</li>
-                                <li className="product-price-show">${product.price}</li>
+                                <li className="product-price-show">${(product.price * 1.00).toFixed(2)}</li>
                                 <button onClick={this.handleClick} className="cart-show">Add to cart</button>
                                 </ul>
                                 

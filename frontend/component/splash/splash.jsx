@@ -19,12 +19,12 @@ class Splash extends React.Component{
                         <p className="front-title">Toys, Made in the USA</p>
                     </div>
                     <ul className='first-layer-images'>
-                        <ProductPiece product={products.slice(30,31)} />
-                        <ProductPiece product={products.slice(31,32)} />
-                        <ProductPiece product={products.slice(32,33)} />
-                        <ProductPiece product={products.slice(33,34)} />
-                        <ProductPiece product={products.slice(34,35)} />
-                        <ProductPiece product={products.slice(35,36)} />  
+                        <ProductPiece product={products.slice(30,31)} key={30} />
+                        <ProductPiece product={products.slice(31,32)} key={31}/>
+                        <ProductPiece product={products.slice(32,33)} key={32}/>
+                        <ProductPiece product={products.slice(33,34)} key={33}/>
+                        <ProductPiece product={products.slice(34,35)} key={34}/>
+                        <ProductPiece product={products.slice(35,36)} key={35}/>  
                     </ul>
                 </div >
 
@@ -41,7 +41,7 @@ class Splash extends React.Component{
                 </div>
 
               
-                {/* <div className="third-layer">
+                <div className="third-layer">
                     <div className="third-layer-parts">
                         <ProductPiece product={products.slice(30,31)} />
                         <ProductPiece product={products.slice(31,32)} />
@@ -59,7 +59,7 @@ class Splash extends React.Component{
                         <ProductPiece product={products.slice(31,32)} />
                     </div>
 
-                </div> */}
+                </div>
                     
                     
                
