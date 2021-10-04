@@ -84,7 +84,9 @@ class Cart extends React.Component{
                                 items.map(item => (
                                     <CartShow key={this.randomKeyNum()} user={user} quantity={item.quantity} item={item}
                                     name={item.product_name} price={item.price} photo={item.photoUrl} id={item.product_id} description={item.description}
-                                    cartItem={item.id} removeItem={removeItem} total={total.toFixed(2)} updateItem = {updateItem } seller = {item.seller_id}/>
+                                    cartItem={item.id} removeItem={removeItem} total={total.toFixed(2)} updateItem = {updateItem } 
+                                    // seller = {item.seller_id}
+                                    />
                                 ))
                             }
                         </ul>
