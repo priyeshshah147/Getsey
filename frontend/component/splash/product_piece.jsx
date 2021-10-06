@@ -15,4 +15,4 @@ const ProductPiece = props => {
     )
 }
 
-export default ProductPiece;
+export default ProductPiece; 

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 # User.connection.execute('ALTER SEQUENCE users_id_seq RESTART WITH 1')
-# Product.delete_all
+Product.delete_all
 User.delete_all
 
 user1 = User.create!(
@@ -33,56 +33,105 @@ user4 = User.create!(
     password: 'password'    
 )
 user5 = User.create!(
-    username: 'Ariel',
-    email: 'ariel@gmail.com',
+    username: 'Vital',
+    email: 'vital@gmail.com',
+    password: 'password'    
+)
+
+user6 = User.create!(
+    username: 'Happy Gifts',
+    email: 'happygifts@gmail.com',
+    password: 'password'    
+)
+
+user7 = User.create!(
+    username: 'Luka Luka',
+    email: 'lukaluka@gmail.com',
+    password: 'password'    
+)
+user8 = User.create!(
+    username: 'Game Stopper',
+    email: 'gamestopper@gmail.com',
+    password: 'password'    
+)
+
+user9 = User.create!(
+    username: 'Awesome Products',
+    email: 'awesome_products@gmail.com',
+    password: 'password'    
+)
+user10 = User.create!(
+    username: 'Leatherman',
+    email: 'leatherman@gmail.com',
     password: 'password'    
 )
 
 
+
 product1 = Product.create!(
-    product_name: 'Schaffhausen',
-    description: 'SCHAFFHAUSEN, Watch, mens watch, mechanical wristWatch, modern watch, Swiss made, gift for men',
+    product_name: 'SCHAFFHAUSEN,  mens watch, mechanical wristWatch, vintage watch, vintage watch Pobeda, soviet watch, gift for men',
+    description: 'Size (from lug to lug): 42 mm *
+    Case Diameter (with crown): 35 mm *
+    Case Diameter (without crown): 33 mm *
+    Watch crystal diameter: 30mm *
+    Thickness: 10 mm *
+    Strap color: Light Brown',
     category_id:1,
     price: 299.99,
-    seller_id: 1
+    seller_id: user5.id
 )
 
 if !product1.photo.attached?
     product1.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch.jpg"), filename: "1.jpg")
 end
 product2 = Product.create!(
-    product_name: 'Custom Watch',
-    description: 'Personalized Custom Watch Groomsmen Watch Father Of The Groom Best Man Gift Ideas Engraved Metal Watch Usher Gift Wedding Party Gift',
+    product_name: 'Engraved Ladies Watch Personalised Rose Gold Quartz Metal Watch Gem Dial Date Function and Gift Box',
+    description: "The COLUMN Rose watch. Designed and hand assembled in Britain's Jewellery Quarter to expert horological specifications. The watch contains high quality quartz movement to ensure reliability. On the back is a premium stainless steel case-back to ensure everyone even those with sensitive skin can enjoy this watch at all times. The case-back can be engraved with any image, text or both of your choosing making this watch the perfect gift for a loved one for any occasion.
+    The watch has a high water-resistance threshold, meaning you can go about your daily routine without needing to worry about getting it wet. It is not recommended that you bathe or swim with the watch.
+    Also, the watch comes with a 24 Month (2 Year) Repair Warranty protecting against any mechanical malfunction of the watch. If something goes wrong, we'll make it right.",
     category_id:1,
-    price: 50.50,
-    seller_id: 2
+    price: 19.99,
+    seller_id: user5.id
 )
 if !product2.photo.attached?
     product2.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch1.jpg"), filename: "2.jpg")
 end
 product3 = Product.create!(
-    product_name: 'Mi Band',
+    product_name: 'Mi Band ',
     description: 'Xiaomi Watch Strap - Mi band 6,5,4,3 Strap Nylon Sport loop watch Belt Pulsera correa Miband - Hyper Grape',
     category_id:1,
     price: 45.99,
-    seller_id: 1
+    seller_id: user5.id
 )
 if !product3.photo.attached?
     product3.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch2.jpg"), filename: "3.jpg")
 end
 product4 = Product.create!(
-    product_name: 'Tissot',
-    description: 'Tissot Chronograph mens watch stainless steel swiss watch',
+    product_name: 'Tissot - Excellent 35mm Original!',
+    description: 'Certified Watchmaker of Gem City College, School of Horology *
+    All timepieces come thoroughly serviced by WierClock *
+    Service available for your existing timepiece *
+    Completely Overhauled cal.27 B-21 Movement *
+    17 Jewels *
+    Shock Protected *
+    Solid Stainless Steel 35mm Case *
+    New 18mm Saddle Stitched Leather Strap *
+    Excellent Original Dial & Hands *
+    New Tension Ring Crystal',
     category_id:1,
     price: 149.99,
-    seller_id: 1
+    seller_id: user5.id
 )
 if !product4.photo.attached?
     product4.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch3.jpg"), filename: "4.jpg")
 end
 product5 = Product.create!(
-    product_name: 'Omega',
-    description: 'Omega vintage Tiffany & Co. Gold Plated mens 1950 Automatic Bumper Caliber 342 watch',
+    product_name: 'Omega 1969s Seamaster Winding Date Mens Vintage Steel Watch',
+    description: "Title: Omega 1969s Seamaster Winding Date red Dial Men's Vintage Steel Watch *
+    Condition: Old Pre-owned Watch Restored & Serviced *
+    Dial: Repainted Red color dial, Luminous Index, Steel with Orange Hands *
+    Case: Stainless Steel Case. 136.018 *
+    Case size: 34mm in width without crown and 40mm",
     category_id:1,
     price: 131.50,
     seller_id: 3

@@ -17,7 +17,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     fetchProduct: (productId) => dispatch(fetchProduct(productId)),
     fetchReviews: (productId) => dispatch(fetchReviews(productId)),
-    addItem: (cartItem) => dispatch(addItem(cartItem))
+    addItem: (cartItem) => dispatch(addItem(cartItem)),
 })
 
 export default connect(mSTP, mDTP)(ProductShow)
