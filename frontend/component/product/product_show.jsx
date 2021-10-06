@@ -33,9 +33,9 @@ class ProductShow extends React.Component {
         let hooray;
       let descriptionLi = <li></li>
       if(product)  {if((product.price * .90 ) >= 50){
-        hooray = "Hooray! shipping is free"
+        hooray = <p><b className="thick">Hooray!</b> shipping is free</p>
       }else{
-          hooray = "Your order arrives in 3 day, if you order today."
+          hooray = <p><b className="thick">Your order arrives in 3 days,</b> if you order today.</p>
       }
       let array = product.description.split('*')
       descriptionLi = array.map(li =>(
@@ -67,9 +67,16 @@ class ProductShow extends React.Component {
                             <div className="klarna-text-product-show">Pay as low as <u>${(product.price / 4.00).toFixed(2)}</u> <b className="thick">Klarna.</b> <u>Learn more</u></div>
                             <button onClick={this.handleClick} className="cart-show">Add to cart</button>
                             <div className="hooray-container">
+                                <Icon icon="emojione:shopping-cart" hFlip={true} width="55px" />
+                                <div className="hooray-text"><b className="thick">Other people want this</b>. Over 20 people have this in their carts right now.</div>
+                            </div>
+                            <div className="hooray-container">
                                 <Icon icon="fa:truck" hFlip={true} width="50px" />
                                 <div className="hooray-text">{hooray}</div>
-
+                            </div>
+                            <div className="hooray-container">
+                            <Icon icon="icomoon-free:gift" color="purple" width="50px"/>
+                                <div className="hooray-text"><b className="thick">Gift wrapping available.</b> <u>See details</u></div>
                             </div>
                             <div className="product-description">Description</div>
                             <li className="product-description-show">{descriptionLi}</li>
