@@ -120,7 +120,7 @@ product4 = Product.create!(
     New Tension Ring Crystal',
     category_id:1,
     price: 149.99,
-    seller_id: user5.id
+    seller_id: user5.id 
 )
 if !product4.photo.attached?
     product4.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch3.jpg"), filename: "4.jpg")
@@ -404,8 +404,12 @@ if !product30.photo.attached?
 end
 
 product31 = Product.create!(
-    product_name: 'Soccer Ball',
-    description: 'FC Barcelona Authentic Official Licensed Soccer Ball Size 5 - 11-2',
+    product_name: 'FC Barcelona Authentic Official Licensed Soccer Ball Size 5 - 11-2',
+    description: 'Support you favorite team! Best for Collection Display or Play*
+    Official license Soccer Team Merchandise Product*
+    Many different unique designs and colors for your collection display or play. Find one that fits your style and/or taste*
+    Designed and Created by Icon Sports Group*
+    Official Size 5, Balls shipped DEFLATED since Brand new form box. Buyer need get a needle re-inflation.',
     category_id:6,
     price: 20.99,
     seller_id: 7
@@ -415,10 +419,11 @@ if !product31.photo.attached?
 end
 
 product32 = Product.create!(
-    product_name: 'Hot Wheels',
-    description: 'Jada Toys Fast & Furious F9 1:24 1968 Dodge Charger Widebody Die-cast Car, Toys for Kids and Adults',
+    product_name: 'Fast & Furious F9 1:24 1968 Dodge Charger Widebody Die-cast Car, Toys for Kids and Adults',
+    description: "Check out this exceptional replica of one of Dom's favorites from the Fast & Furious franchise! Dom's 1970 Dodge Charger With Engine Blower Hard Top is a 1/32 scale diecast model replica. It comes in black and features free wheel action. It's a brilliant selection for any Hollywood movie car collection, and a real gem for devoted Fast & Furious enthusiasts!
+    Quality Diecast Car",
     category_id:6,
-    price: 8.99,
+    price: 17.99,
     seller_id: 7
 )
 if !product32.photo.attached?
@@ -426,8 +431,13 @@ if !product32.photo.attached?
 end
 
 product33 = Product.create!(
-    product_name: 'Dog Toys',
-    description: 'Classic Goodie Bone Dog Toy',
+    product_name: 'Classic Goodie Bone Dog Toy',
+    description: "Give your furry friend a challenge with the KONG Goodie Bone Dog Toy. The answer to dogs that love a classic bone shape but need a safe and strong rubber toy. Each end of the bone features two Goodie Grippers for pet parents to fill with KONG Snacks or Stuff’N Easy Treat for extended play sessions. Keep your pup occupied and happy with KONG Goodie Bone Dog Toy.*
+    *-Available in three sizes: Small, Medium and Large, so that you can pick the perfect size for your pup.
+    *-Made from KONG durable rubber that is long-lasting and soft on your dog's teeth and gums.
+    *-Perfect for stuffing with KONG Stuff'N or Easy Treat paste.
+    *-Treat dispensing toy provides a mentally stimulating puzzle for average chewers.
+    *-Recommended by vets worldwide as a safe toy for active dogs",
     category_id:6,
     price: 14.99,
     seller_id: 7
@@ -437,8 +447,8 @@ if !product33.photo.attached?
 end
 
 product34 = Product.create!(
-    product_name: 'Action figures',
-    description: 'Marvel Guardians of The Galaxy Groot Ravager Outfit Action Figure',
+    product_name: 'Marvel Guardians of The Galaxy Groot Ravager Outfit Action Figure',
+    description: "When Groot is captured by a Ravager faction and unwillingly suited up as their mascot, he sets out to take revenge thats well worth rooting for. Imagine tagging along with Groot with this 11.5-inch Groot figure, featuring the Ravager outfit from the upcoming Guardians of the Galaxy: Volume 2 film. With this fun, movie-inspired figure, kids can imagine stretching their branches alongside Groot and joining him on awesome intergalactic adventures!",
     category_id:6,
     price: 22.95,
     seller_id: 8
@@ -448,8 +458,12 @@ if !product34.photo.attached?
 end
 
 product35 = Product.create!(
-    product_name: 'Baby Puzzles',
-    description: 'Fisher-Price Giant Rock-a-Stack',
+    product_name: 'Fisher-Price Giant Rock-a-Stack',
+    description:"-The classic Fisher-Price stacking toy gets supersizedover 14 inches tall!*
+    -6 colorful rings for your baby to grasp, shake, stack, and explore*
+    -Shake the top ring for fun rattle sounds*
+    -Wobbly, bat-at base*
+    -For babies ages 12 months and older" ,
     category_id:6,
     price: 15.97,
     seller_id: 7
@@ -459,8 +473,12 @@ if !product35.photo.attached?
 end
 
 product36 = Product.create!(
-    product_name: 'Soft Toys',
-    description: 'Fluffuns Teddy Bear Plush - Cute Teddy Bears Stuffed Animals in 3 Colors - 3-Pack of Stuffed Bears - 9 Inch Height (Dark Brown, Golden, White)',
+    product_name: 'Fluffuns Teddy Bear Plush - Cute Teddy Bears Stuffed Animals in 3 Colors - 3-Pack of Stuffed Bears - 9 Inch Height (Dark Brown, Golden, White)',
+    description: "Teddy bear stuffed animal
+    Soft, adorable, cute, huggable, cuddly and premium quality
+    Available in 3 colors: light brown/tan, white and brown bears
+    Intended for ages 2+
+    9 inch height stuffed bear",
     category_id:6,
     price: 25.88,
     seller_id: 8

@@ -40,7 +40,7 @@ class ProductShow extends React.Component {
       }
       arrayDescription = product.description.split('*')
       descriptionLi = arrayDescription.map(li =>(
-          <li>{li}</li>
+          <li className="description-list">{li}</li>
       ))
     }
       return(

@@ -19,12 +19,12 @@ class Splash extends React.Component{
                         <p className="front-title">Toys, Made in the USA</p>
                     </div>
                     <ul className='first-layer-images'>
-                        <ProductPiece product={products.slice(30,31)} key={30} />
-                        <ProductPiece product={products.slice(31,32)} key={31}/>
-                        <ProductPiece product={products.slice(32,33)} key={32}/>
-                        <ProductPiece product={products.slice(33,34)} key={33}/>
-                        <ProductPiece product={products.slice(34,35)} key={34}/>
-                        <ProductPiece product={products.slice(35,36)} key={35}/>  
+                        <ProductPiece product={products.slice(30,31)} key={30} title={'Soccer Ball'}/>
+                        <ProductPiece product={products.slice(31,32)} key={31} title={'Hot Wheels'}/>
+                        <ProductPiece product={products.slice(32,33)} key={32} title={'Dog Toys'}/>
+                        <ProductPiece product={products.slice(33,34)} key={33} title={'Action figures'}/>
+                        <ProductPiece product={products.slice(34,35)} key={34} title={'Baby Puzzles'}/>
+                        <ProductPiece product={products.slice(35,36)} key={35} title={'Soft Toys'}/>  
                     </ul>
                 </div >
 
