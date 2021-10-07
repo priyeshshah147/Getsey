@@ -31,14 +31,15 @@ class ProductShow extends React.Component {
       
       const {product} = this.props
         let hooray;
-      let descriptionLi = <li></li>
+      let descriptionLi = <ul></ul>;
+      let arrayDescription = [];
       if(product)  {if((product.price * .90 ) >= 50){
         hooray = <p><b className="thick">Hooray!</b> shipping is free</p>
       }else{
           hooray = <p><b className="thick">Your order arrives in 3 days,</b> if you order today.</p>
       }
-      let array = product.description.split('*')
-      descriptionLi = array.map(li =>(
+      arrayDescription = product.description.split('*')
+      descriptionLi = arrayDescription.map(li =>(
           <li>{li}</li>
       ))
     }
@@ -55,10 +56,10 @@ class ProductShow extends React.Component {
                             </div>  
                         </div>                        
                         <div className="product-details">
-                            <ul>
-                            <li className="product-name-show">{product.product_name}</li>
+                            
+                            <div className="product-name-show">{product.product_name}</div>
                             <div className="product-price-show-container">
-                                <li className="product-price-show">${(product.price * 1.00).toFixed(2)}</li>
+                                <div className="product-price-show">${(product.price * 1.00).toFixed(2)}</div>
                                 <div className="in-stock">
                                     <div><Icon icon="teenyicons:tick-solid"/>  </div>
                                     <div className="in-stock-text"> In Stock</div>
@@ -78,9 +79,12 @@ class ProductShow extends React.Component {
                             <Icon icon="icomoon-free:gift" color="purple" width="50px"/>
                                 <div className="hooray-text"><b className="thick">Gift wrapping available.</b> <u>See details</u></div>
                             </div>
+                            
+
+
                             <div className="product-description">Description</div>
-                            <li className="product-description-show">{descriptionLi}</li>
-                            </ul>
+                            <li className="product-description-text">{descriptionLi}</li>
+                           
                             
                         </div>
                         
