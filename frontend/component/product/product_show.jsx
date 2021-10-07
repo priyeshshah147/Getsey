@@ -30,18 +30,24 @@ class ProductShow extends React.Component {
   render(){
       
       const {product} = this.props
-        let hooray;
+      let hooray;
       let descriptionLi = <ul></ul>;
       let arrayDescription = [];
-      if(product)  {if((product.price * .90 ) >= 50){
-        hooray = <p><b className="thick">Hooray!</b> shipping is free</p>
-      }else{
-          hooray = <p><b className="thick">Your order arrives in 3 days,</b> if you order today.</p>
-      }
-      arrayDescription = product.description.split('*')
-      descriptionLi = arrayDescription.map(li =>(
-          <li className="description-list">{li}</li>
-      ))
+      let reviewForm;
+      if(product)  {
+            if((product.price * .90 ) >= 50){
+                hooray = <p><b className="thick">Hooray!</b> shipping is free</p>
+            }else{
+                hooray = <p><b className="thick">Your order arrives in 3 days,</b> if you order today.</p>
+            }
+            arrayDescription = product.description.split('*')
+            descriptionLi = arrayDescription.map(li =>(
+                <li className="description-list">{li}</li>
+            ))
+                
+            if(this.props.currentUser){
+                reviewForm = <ReviewFormContainer product={product}/>
+            }
     }
       return(
          (product)? <div className="complete-showpage">
@@ -51,7 +57,7 @@ class ProductShow extends React.Component {
                                 <div className="product-image-container"><img className="product-show-image" src={product.image}/>  </div>
                             </div>
                             <div className="review-index">
-                                <ReviewFormContainer product={product}/>
+                                {reviewForm}
                                 <ReviewIndexContainer product={product}/> 
                             </div>  
                         </div>                        
