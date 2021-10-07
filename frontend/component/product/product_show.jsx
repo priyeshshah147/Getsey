@@ -80,10 +80,14 @@ class ProductShow extends React.Component {
                                 <div className="hooray-text"><b className="thick">Gift wrapping available.</b> <u>See details</u></div>
                             </div>
                             
+                            <div className="product-highlights-title">Highlights</div>
+                            <div className="product-highlights-container">
+                                <Icon icon="ic:round-front-hand" className="handmade-icon"/>
+                                <div className="product-description-text">Handmade</div>
+                            </div>
 
-
-                            <div className="product-description">Description</div>
-                            <li className="product-description-text">{descriptionLi}</li>
+                            <div className="product-description-title">Description</div>
+                            <li className="product-description-text description-li">{descriptionLi}</li>
                            
                             
                         </div>
