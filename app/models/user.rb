@@ -6,9 +6,9 @@ class User < ApplicationRecord
     attr_reader :password
     after_initialize :ensure_session_token
 
-    # has_many :products,
-    # foreign_key: :seller_id,
-    # class_name: :Product
+    has_many :products,
+    foreign_key: :seller_id,
+    class_name: :Product
 
     has_many :reviews, 
     foreign_key: :reviewer_id, 

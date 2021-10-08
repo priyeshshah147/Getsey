@@ -42,24 +42,24 @@ class Splash extends React.Component{
 
               
                 <div className="third-layer">
-                    <div className="third-layer-parts">
+                    {/* <div className="third-layer-parts">
                         <Link to={"products/57"} className="small-splash-3">
                             something
-                            {/* <img className="splash-3" src={products[1]}/> */}
+                            
                         </Link>
-                    </div>
-                    <div className="third-layer-parts">
+                    </div> */}
+                    {/* <div className="third-layer-parts">
                         <ProductPiece product={products.slice(30,31)} />
                         <ProductPiece product={products.slice(31,32)} />
-                    </div>
-                    <div className="third-layer-parts">
+                    </div> */}
+                    {/* <div className="third-layer-parts">
                         <ProductPiece product={products.slice(30,31)} />
                         <ProductPiece product={products.slice(31,32)} />
-                    </div>
-                    <div className="third-layer-parts">
+                    </div> */}
+                    {/* <div className="third-layer-parts">
                         <ProductPiece product={products.slice(30,31)} />
                         <ProductPiece product={products.slice(31,32)} />
-                    </div>
+                    </div> */}
 
                 </div>
                     

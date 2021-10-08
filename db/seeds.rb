@@ -134,7 +134,7 @@ product5 = Product.create!(
     Case size: 34mm in width without crown and 40mm",
     category_id:1,
     price: 131.50,
-    seller_id: 3
+    seller_id: user5.id
 )
 if !product5.photo.attached?
     product5.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch4.jpg"), filename: "5.jpg")
@@ -144,7 +144,7 @@ product6 = Product.create!(
     description: 'Daniel Wellington Classy Brown & Silver Toned Wristwatch w/ Adjustable Band',
     category_id:1,
     price: 7.50,
-    seller_id: 5
+    seller_id: user5.id
 )
 if !product6.photo.attached?
     product6.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/watch5.jpg"), filename: "6.jpg")
@@ -154,7 +154,7 @@ product7 = Product.create!(
     description: 'Koi Fish personalized men wallet, custom gift for men, animal wallet for him, anniversary gift, Father Day gift idea for him 2021',
     category_id:2,
     price: 25.99,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product7.photo.attached?
     product7.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet1.jpg"), filename: "7.jpg")
@@ -164,7 +164,7 @@ product8 = Product.create!(
     description: 'PU personalized men wallet, custom gift for men, animal wallet for him, anniversary gift, Father Day gift idea for him 2021',
     category_id:2,
     price: 19.99,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product8.photo.attached?
     product8.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet2.jpg"), filename: "8.jpg")
@@ -174,7 +174,7 @@ product9 = Product.create!(
     description: 'Cool style for summer',
     category_id:2,
     price: 15.60,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product9.photo.attached?
     product9.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet3.jpg"), filename: "9.jpg")
@@ -184,7 +184,7 @@ product10 = Product.create!(
     description: 'Highquality heaphones, the best you can ever get',
     category_id:2,
     price: 200.00,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product10.photo.attached?
     product10.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet4.jpg"), filename: "10.jpg")
@@ -194,7 +194,7 @@ product11 = Product.create!(
     description: 'You can`t go wrong with black wallet, very fine and good looking',
     category_id:2,
     price: 15.60,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product11.photo.attached?
     product11.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet5.jpg"), filename: "11.jpg")
@@ -205,7 +205,7 @@ product12 = Product.create!(
     description: 'Style is nothing without a class, so is a man without a waller... nothing',
     category_id:2,
     price: 100.51,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product12.photo.attached?
     product12.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/wallet6.jpg"), filename: "12.jpg")
@@ -215,7 +215,7 @@ product13 = Product.create!(
     description: 'Rose Gold Tungsten Ring Men Women Wedding Band Beveled Edge Grey Brushed Design 6MM Size 5 6 7 8 9 10 11 12 13 14 Anniversary Love Gift',
     category_id:3,
     price: 259.99,
-    seller_id: 5
+    seller_id: user7.id
 )
 if !product13.photo.attached?
     product13.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring1.jpg"), filename: "13.jpg")
@@ -225,7 +225,7 @@ product14 = Product.create!(
     description: 'Highquality titanium ring, the best you can ever get',
     category_id:3,
     price: 200.00,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product14.photo.attached?
     product14.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring2.jpg"), filename: "14.jpg")
@@ -235,7 +235,7 @@ product15 = Product.create!(
     description: 'Casual ring. stylish and affordable',
     category_id:3,
     price: 15.60,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product15.photo.attached?
     product15.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring3.jpg"), filename: "15.jpg")
@@ -246,7 +246,7 @@ product16 = Product.create!(
     description: 'Tungsten Carbide Wedding Ring Comfort 6mm or 8mm widths available',
     category_id:3,
     price: 100.51,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product16.photo.attached?
     product16.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring4.jpg"), filename: "16.jpg")
@@ -257,7 +257,7 @@ product17 = Product.create!(
     description: 'Stainless Steel Wedding Ring Comfort 6mm or 8mm widths available',
     category_id:3,
     price: 15.99,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product17.photo.attached?
     product17.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring6.jpg"), filename: "17.jpg")
@@ -267,7 +267,7 @@ product18 = Product.create!(
     description: 'Diamond Wedding Ring Comfort 6mm or 8mm widths available',
     category_id:3,
     price: 999.99,
-    seller_id: 5
+    seller_id: user6.id
 )
 if !product18.photo.attached?
     product18.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ring7.jpg"), filename: "18.jpg")
@@ -277,7 +277,7 @@ product19 = Product.create!(
     description: 'Steampunk Round, Blue Reflective, Sunglasses, Unisex, Trendy, Retro, Urban, Hippie, Steampunk, Cool, Vintage Style, Unisex, Steampunk Hip',
     category_id:4,
     price: 19.95,
-    seller_id: 2
+    seller_id: user7.id
 )
 if !product19.photo.attached?
     product19.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass1.jpg"), filename: "19.jpg")
@@ -288,7 +288,7 @@ product20 = Product.create!(
     description: 'Brooklyn, (Bling) Reading Glasses for Women W (Hematite + L. Colorado) Genuine European Crystals. +1.25..+3 Square. NY Fifth Avenue',
     category_id:4,
     price: 29.95,
-    seller_id: 2
+    seller_id: user7.id
 )
 if !product20.photo.attached?
     product20.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass2.jpg"), filename: "20.jpg")
@@ -299,7 +299,7 @@ product21 = Product.create!(
     description: '90s Square Sunglasses Vintage Inspired , Black Glasses, Orange, Pink, Yellow, Red Lenses, Plastic Frame, Women, Men, Unisex',
     category_id:4,
     price: 14.95,
-    seller_id: 2
+    seller_id: user7.id
 )
 if !product21.photo.attached?
     product21.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass3.jpg"), filename: "21.jpg")
@@ -310,7 +310,7 @@ product22 = Product.create!(
     description: 'Golden Boy 1970s Wire Rim Aviator Glasses – Mens Wire Frame Aviator Sunglasses – Shiny Gold Aviator Sunglasses – Old Stock Golden Aviators',
     category_id:4,
     price: 66.00,
-    seller_id: 2
+    seller_id: user7.id
 )
 if !product22.photo.attached?
     product22.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass4.jpg"), filename: "22.jpg")
@@ -321,7 +321,7 @@ product23 = Product.create!(
     description: 'Ray Ban Wayfarer Black Classic Sunglasses - 901 RB2140 - 50mm 54mm',
     category_id:4,
     price: 59.99,
-    seller_id: 2
+    seller_id: user7.id
 )
 if !product23.photo.attached?
     product23.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass5.jpg"), filename: "23.jpg")
@@ -332,7 +332,7 @@ product24 = Product.create!(
     description: 'New Rayban Tortoise Brown Clubmaster Sunglasses Ray Ban',
     category_id:4,
     price: 28.00,
-    seller_id: 2
+    seller_id: user7.id
 )
 if !product24.photo.attached?
     product24.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/glass7.jpg"), filename: "24.jpg")
@@ -343,7 +343,7 @@ product25 = Product.create!(
     description: 'Nike Men Running Shoes Non Slip Shoes Breathable Lightweight Sneakers Slip Resistant Athletic Sports Walking Gym Work Shoes',
     category_id:5,
     price: 200.00,
-    seller_id: 6
+    seller_id: user8.id
 )
 if !product25.photo.attached?
     product25.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe1.jpg"), filename: "25.jpg")
@@ -353,7 +353,7 @@ product26 = Product.create!(
     description: 'adidas Women Grand Court Sneaker',
     category_id:5,
     price: 64.95,
-    seller_id: 6
+    seller_id: user8.id
 )
 if !product26.photo.attached?
     product26.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe.jpg"), filename: "26.jpg")
@@ -364,7 +364,7 @@ product27 = Product.create!(
     description: 'Nike womens Running shoes. Orange and white',
     category_id:5,
     price: 102.67,
-    seller_id: 6
+    seller_id: user8.id
 )
 if !product27.photo.attached?
     product27.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe2.jpg"), filename: "27.jpg")
@@ -375,7 +375,7 @@ product28 = Product.create!(
     description: 'Nike Mens Free RN Flyknit Running Shoe',
     category_id:5,
     price: 79.00,
-    seller_id: 7
+    seller_id: user8.id
 )
 if !product28.photo.attached?
     product28.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe3.jpg"), filename: "28.jpg")
@@ -386,7 +386,7 @@ product29 = Product.create!(
     description: 'Nike Jordan 1 Mid Igloo Mens 554724-132',
     category_id:5,
     price: 169.95,
-    seller_id: 7
+    seller_id: user8.id
 )
 if !product29.photo.attached?
     product29.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe4.jpg"), filename: "29.jpg")
@@ -397,7 +397,7 @@ product30 = Product.create!(
     description: 'Nike Air Max 270',
     category_id:5,
     price: 150.00,
-    seller_id: 7
+    seller_id: user8.id
 )
 if !product30.photo.attached?
     product30.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/shoe5.jpg"), filename: "30.jpg")
@@ -412,7 +412,7 @@ product31 = Product.create!(
     Official Size 5, Balls shipped DEFLATED since Brand new form box. Buyer need get a needle re-inflation.',
     category_id:6,
     price: 20.99,
-    seller_id: 7
+    seller_id: user9.id
 )
 if !product31.photo.attached?
     product31.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/ball1.jpg"), filename: "31.jpg")
@@ -424,7 +424,7 @@ product32 = Product.create!(
     Quality Diecast Car",
     category_id:6,
     price: 17.99,
-    seller_id: 7
+    seller_id: user9.id
 )
 if !product32.photo.attached?
     product32.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/car5.jpg"), filename: "32.jpg")
@@ -440,7 +440,7 @@ product33 = Product.create!(
     *-Recommended by vets worldwide as a safe toy for active dogs",
     category_id:6,
     price: 14.99,
-    seller_id: 7
+    seller_id: user9.id
 )
 if !product33.photo.attached?
     product33.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/dogt3.jpg"), filename: "33.jpg")
@@ -451,7 +451,7 @@ product34 = Product.create!(
     description: "When Groot is captured by a Ravager faction and unwillingly suited up as their mascot, he sets out to take revenge thats well worth rooting for. Imagine tagging along with Groot with this 11.5-inch Groot figure, featuring the Ravager outfit from the upcoming Guardians of the Galaxy: Volume 2 film. With this fun, movie-inspired figure, kids can imagine stretching their branches alongside Groot and joining him on awesome intergalactic adventures!",
     category_id:6,
     price: 22.95,
-    seller_id: 8
+    seller_id: user9.id
 )
 if !product34.photo.attached?
     product34.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/action5.jpg"), filename: "34.jpg")
@@ -466,7 +466,7 @@ product35 = Product.create!(
     -For babies ages 12 months and older" ,
     category_id:6,
     price: 15.97,
-    seller_id: 7
+    seller_id: user9.id
 )
 if !product35.photo.attached?
     product35.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/puzzle2.jpg"), filename: "35.jpg")
@@ -481,7 +481,7 @@ product36 = Product.create!(
     9 inch height stuffed bear",
     category_id:6,
     price: 25.88,
-    seller_id: 8
+    seller_id: user9.id
 )
 if !product36.photo.attached?
     product36.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/teddy1.jpg"), filename: "36.jpg")

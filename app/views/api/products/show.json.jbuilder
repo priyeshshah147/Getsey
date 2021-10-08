@@ -17,3 +17,7 @@ json.reviews do
         end
     end
 end
+
+json.seller do 
+    json.partial! "api/users/user", user: @product.seller
+end
