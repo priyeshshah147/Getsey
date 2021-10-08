@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import ProductPiece from './product_piece';
 import ProductSlice from './product_slice';
+import ProductSlice2 from './product_slice2';
 import ProductIndexContainer from '../product/product_index_container';
 
 class Splash extends React.Component{
@@ -41,27 +42,16 @@ class Splash extends React.Component{
                 </div>
 
               
-                <div className="third-layer">
-                    {/* <div className="third-layer-parts">
-                        <Link to={"products/57"} className="small-splash-3">
-                            something
-                            
-                        </Link>
-                    </div> */}
-                    {/* <div className="third-layer-parts">
-                        <ProductPiece product={products.slice(30,31)} />
-                        <ProductPiece product={products.slice(31,32)} />
-                    </div> */}
-                    {/* <div className="third-layer-parts">
-                        <ProductPiece product={products.slice(30,31)} />
-                        <ProductPiece product={products.slice(31,32)} />
-                    </div> */}
-                    {/* <div className="third-layer-parts">
-                        <ProductPiece product={products.slice(30,31)} />
-                        <ProductPiece product={products.slice(31,32)} />
-                    </div> */}
+                {/* <div className="third-layer">
+                    <h3 className="splash-mini-title">Recently viewed & more</h3>
+                    <ProductSlice2  products={products.slice(36,42)}/>
+                    
+                    <div>
+                        <ProductPiece2 product={products.slice(42,43)}/>
+                    </div>
+                    
 
-                </div>
+                </div> */}
                     
                     
                

@@ -66,6 +66,12 @@ user10 = User.create!(
     password: 'password'    
 )
 
+user11 = User.create!(
+    username: 'Morning Joy Co',
+    email: 'morningjoy.co@gmail.com',
+    password: 'password'    
+)
+
 
 
 product1 = Product.create!(
@@ -485,4 +491,122 @@ product36 = Product.create!(
 )
 if !product36.photo.attached?
     product36.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/teddy1.jpg"), filename: "36.jpg")
+end
+
+product37 = Product.create!(
+    product_name: "Custom Mixing Bowl with Handwritten Family Recipe - Recipe Dish - Large Ceramic Kitchen Bowl with Custom Recipe - Heirloom Gifts",
+    description: "This mixing bowl is a unique gift for mom, dad, grandma, grandpa, and/or friends that love to cook and bake. This large bowl is made out of earthenware clay and glazed with a glossy finish and it can have a favorite family recipe added on the front of the bowl. This bowl measures approximately 10.75' x 10.75' x 5'.",
+    category_id:7,
+    price: 164.99,
+    seller_id: user9.id
+)
+if !product37.photo.attached?
+    product37.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/home1.JPG"), filename: "37.jpg")
+end
+
+product38 = Product.create!(
+    product_name: "Scallop shell terrazzo vase",
+    description: "A scallop shell vase in dusky pink terrazzo eco resin perfect for dried grasses or flowers.
+
+    *All handmade in an eco resin with terrazzo, hand sanded and finished. Each vase can hold either dried grasses or water and a bud stem or wild flowers.
+    
+    *Made from a pinky terracotta eco resin and full of terrazzo crushed recycled shell and black and white flecks.
+    
+    *The vase has a glass attachment to the back, this is attached using recycled vegetable tanned waste leather from a fabulous local maker Wild Origin based near my studio in Cornwall.
+    
+    *12cm x 11cm x 4cm - approx as each one is hand sanded.",
+    category_id:7,
+    price: 45.45,
+    seller_id: user9.id
+)
+if !product38.photo.attached?
+    product38.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/home2.JPG"), filename: "38.jpg")
+end
+
+product39 = Product.create!(
+    product_name: "Leather Strap Wine Rack // Free Gift Wrapping // Leather Home Accessories // Leather Wall Hanging Strap // Leather Hanging Storage",
+    description: "The leather strap will be a good addition to give your interior a new look. They can be used in many ways, you can use it like a Wine Rack , magazine rack , towel rack in the kitchen or bathroom . Use two leather wall hooks plus driftwood to hang larger items such as towels, fabric storage, or even as a curtain rod hanger.
+
+    *- I use vegetable leather tanned with bronze hardware
+    
+    *- You can choose the color of the product from such options: Natural , Tan and Black.
+    
+    *- You can also choose the design of the strap from such options : Oblique , Flat and Round .",
+    category_id:7,
+    price: 23.70,
+    seller_id: user9.id
+)
+if !product39.photo.attached?
+    product39.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/home3.JPG"), filename: "39.jpg")
+end
+
+product40 = Product.create!(
+    product_name: "Amanita muscaria mushroom spoon rest Ceramic utensil holder Mushroom lover gift",
+    description: "Ceramic Amanita muscaria mushroom spoon rest for the home in a Woodland-style (perfect gift for the woman).
+
+    *- Dimensions:
+    
+    *Ceramic Amanita muscaria mushroom spoon rest: 7.7'' * 4.7 '' (20 * 12 cm)",
+    category_id:7,
+    price: 31.50,
+    seller_id: user9.id
+)
+if !product40.photo.attached?
+    product40.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/home4.JPG"), filename: "40.jpg")
+end
+
+product41 = Product.create!(
+    product_name: "Custom Hand Cut Map Artwork, 11x14, 16x20 or 22x30. NOV completion.",
+    description: "This listing is for one ORIGINAL Hand Cut Map, by the paper cutting artist, Karen O'Leary.
+    Please list a city, or specific address to be mapped in your order (Any City or Any location is possible) and I'll create a custom Hand Cut Map for you.
+    
+    *Choose your size at checkout.
+    Map will be hand cut from white watercolor paper (acid-free, archival, 90 lb., textured surface)
+    Framing not included.
+    
+    *The exact coverage area will be emailed for approval 1-2 weeks after the order is placed and paid for.",
+    category_id:7,
+    price: 400.00,
+    seller_id: user9.id
+)
+if !product41.photo.attached?
+    product41.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/home5.JPG"), filename: "41.jpg")
+end
+
+product42 = Product.create!(
+    product_name: "Recipe Cutting Board | Personalized Engraved Custom Cutting Board | Kitchen Decor | Christmas Gift | Birthday | Housewarming | Wedding",
+    description: "- Wood Options: Hickory (Photo 1); Maple (Photo 2); Cherry (Photo 3); Sapele (Photo 4).
+
+    *- Size: 16” x 9”, including handle.
+    
+    *- All wood products are naturally rustic, each with their own unique accents. Cutting boards are made of 100% natural wood. No two boards will be exactly alike due to natural variations in grain patterns and tones.
+    
+    *- All cutting boards are treated with food-safe Walrus Oil, although boards should be used for decor only to preserve the engraving.
+    
+    *- Recipes may also be typed.
+    
+    *- Two-sided board engravings also available for multiple recipes or long recipes.",
+    category_id:7,
+    price: 69.00,
+    seller_id: user9.id
+)
+if !product42.photo.attached?
+    product42.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/home6.JPG"), filename: "42.jpg")
+end
+
+product43 = Product.create!(
+    product_name: "Children's Chair Rainbow, Personalized High Chair, Kids Table and Chair, Kindergarten Furniture, Wooden Chair Toddler, Children's Furniture Set",
+    description: "- Robust, pastel-colored rainbow chair on which your little darling can sit child-friendly
+    *- Customizable with the name of the child
+    *- High-quality production of joiner's hand
+    *- Material: Solid wood, paint and varnish: non-toxic certified
+    *- Product dimensions: width: 27 cm, depth: 29 cm, height: 53 cm, seat height: 30 cm, weight approx. 2.7 kg
+    *- Suitable for children aged 2 to about 5 years
+    *- matching children's table (50 x 50 cm) is optional (see set: 1 chair and 1 table)! The table is in white, matt lacquered. With the set there is the personalization for free!",
+    category_id:7,
+    price: 215.74,
+    seller_id: user9.id
+)
+if !product43.photo.attached?
+    product43.photo.attach(io: URI.open("https://getsey2-seeds.s3.us-east-2.amazonaws.com/home7.JPG"), filename: "43.jpg")
 end
