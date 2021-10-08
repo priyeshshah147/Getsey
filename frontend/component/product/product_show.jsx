@@ -62,10 +62,10 @@ class ProductShow extends React.Component {
                             </div>  
                         </div>                        
                         <div className="product-details">
-                            {/* <div className="product-show-seller-container">
+                            <div className="product-show-seller-container">
                                 <Icon icon="gg:profile"  width="30px"/>
                                 <div className="product-seller-name">{product.seller.username}</div>
-                            </div> */}
+                            </div>
                             
                             <div className="product-name-show">{product.product_name}</div>
                             <div className="product-price-show-container">
