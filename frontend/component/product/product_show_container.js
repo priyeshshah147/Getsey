@@ -5,7 +5,7 @@ import { fetchReviews } from '../../actions/review_actions';
 import { addItem } from '../../actions/cartitem_actions';
 
 const mSTP = (state, ownProps) => {
-    
+    // debugger
     return{
         product: state.entities.products[ownProps.match.params.productId],
         currentUser: state.entities.users[state.session.id],

@@ -48,7 +48,9 @@ class ProductShow extends React.Component {
             if(this.props.currentUser){
                 reviewForm = <ReviewFormContainer product={product}/>
             }
+            
     }
+    // debugger
       return(
          (product)? <div className="complete-showpage">
                         <div className="product-showpage-left-container">
