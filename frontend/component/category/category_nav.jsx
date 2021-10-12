@@ -9,7 +9,7 @@ class CategoryNav extends React.Component {
         <div className="nav-list">
         
             <div className="category-nav-div">
-              <button className="category-button">
+              <button className="category-button-end">
                 Back to School Trends 
               </button>
             </div>
@@ -51,7 +51,7 @@ class CategoryNav extends React.Component {
             </div>
 
             <div className="category-nav-div">
-              <button className="category-button">
+              <button className="category-button-end">
                 Art & Collectibles
               </button>
             </div>        
