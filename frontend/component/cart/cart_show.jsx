@@ -50,7 +50,7 @@ class CartShow extends React.Component {
                         <Link to={`/products/${this.props.id}`}><img className="cart-show-image" src={this.props.photo}/></Link>
                     </div>
                     <div className="cart-item-section-2">
-                        <div className="cart-item-description">{this.props.description}</div>
+                        <div className="cart-item-description">{this.props.name}</div>
                         <div><button className="cart-remove-item" onClick={this.handleDelete}>Remove</button></div>
                         
                     </div>
