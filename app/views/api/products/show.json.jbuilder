@@ -1,9 +1,4 @@
-#  json.products do 
-#     json.set! @product.id do
-#         json.extract! @product, :id, :product_name, :price, :seller_id, :description
-#         json.image url_for(@product.photo)
-#     end
-# end
+
 
 json.partial! "api/products/product", product: @product
 
@@ -21,3 +16,5 @@ end
 json.seller do 
     json.partial! "api/users/user", user: @product.seller
 end
+
+# json.extract! product.seller, :username

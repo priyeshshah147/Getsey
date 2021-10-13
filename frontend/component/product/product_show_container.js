@@ -8,7 +8,7 @@ const mSTP = (state, ownProps) => {
     // debugger
     return{
         product: state.entities.products[ownProps.match.params.productId],
-        currentUser: state.entities.users[state.session.id],
+        currentUser: state.entities.users[state.session.id]
     }
     
 
