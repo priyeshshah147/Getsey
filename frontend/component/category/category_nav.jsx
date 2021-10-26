@@ -10,9 +10,11 @@ class CategoryNav extends React.Component {
         <div className="nav-list">
         
             <div className="category-nav-div">
+              <Link to={"/all"}>
               <button className="category-button-end">
                 Back to School Trends 
               </button>
+              </Link>
             </div>
 
             <div className="category-nav-div">
