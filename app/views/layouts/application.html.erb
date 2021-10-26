@@ -10,7 +10,7 @@
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag asset_path('favicon.ico')%>
     <meta property="og:title" content="Getsey" />
-    <meta property="og:image" content="../../assets/images/getsey_image.JPG" />
+    <meta property="og:image" content="<%= image_url('getsey_image.JPG')%>" />
     <script type="text/javascript">
       window.klarna = "<%= image_url('klarna.png') %>"
     </script>
