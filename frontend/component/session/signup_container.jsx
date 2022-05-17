@@ -9,8 +9,8 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 const mSTP = ({ errors }) => {
     return {
       errors: errors.session,
-      formType: 'signup',
-      navLink: <Link to={"/login"}>log in instead</Link>,
+      formType: 'Sign up',
+      navLink: <Link to={"/login"}>Sign in instead</Link>,
     };
   };
   
@@ -20,7 +20,7 @@ const mSTP = ({ errors }) => {
       deleteErrors :() => dispatch(removeErrors()),
       otherForm:(
         <button onClick={() => dispatch(openModal('login'))}>
-            Login
+            Sign in
         </button>
       ),
       closeModal: () => dispatch(closeModal())
