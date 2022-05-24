@@ -56,7 +56,7 @@ class LoginForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br/>
           <div className="login-form">
-          <div ><label  className="modal-heading">Sign in to continue</label></div>
+          <div className='modal-top-signin'><div><label  className="modal-heading">Sign in </label></div> <div>{this.props.otherForm}</div></div>
             <br/>
             <label className="login-label">Username:
               <input type="text"

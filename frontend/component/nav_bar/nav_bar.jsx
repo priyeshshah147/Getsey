@@ -16,8 +16,8 @@ const display = currentUser ? (
     <div className="arrange-button">
       <button className="cart">
       </button>
-      <button className="signup-button-nav" onClick={()=>openModal('signup')}>Sign up</button>
-      <br></br>
+      {/* <button className="signup-button-nav" onClick={()=>openModal('signup')}>Sign up</button>
+      <br></br> */}
       <button className="login-button-nav" onClick={()=>openModal('login')}>Sign in</button>
     </div>
   );

@@ -49,7 +49,7 @@ class SignUpForm extends React.Component {
           <br/>
           
           <div className="signup-form">
-          <div ><label  className="modal-heading">Sign up to continue</label></div>
+          <div ><label  className="modal-heading">Create your account</label></div>
             <br/>
             <label className="signup-label">Username:
               <input type="text"
