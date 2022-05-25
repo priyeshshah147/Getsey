@@ -45,9 +45,9 @@ class SignUpForm extends React.Component {
   render() {
     return (
       <div className="signup-form-container">
+        <div onClick={this.props.closeModal} className="close-x">✖</div>
         <form onSubmit={this.handleSubmit} className="signup-form-box">
           <br/>
-          
           <div className="signup-form">
           <div ><label  className="modal-heading">Create your account</label></div>
             <br/>

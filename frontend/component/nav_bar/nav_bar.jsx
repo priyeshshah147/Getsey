@@ -14,10 +14,7 @@ const display = currentUser ? (
     </div>
   ) : (
     <div className="arrange-button">
-      <button className="cart">
-      </button>
-      {/* <button className="signup-button-nav" onClick={()=>openModal('signup')}>Sign up</button>
-      <br></br> */}
+      <div className='cart-icon' onClick={() =>alert('Please sign in or sign up to view cart')}><Icon icon="typcn:shopping-cart" width="28" /></div>
       <button className="login-button-nav" onClick={()=>openModal('login')}>Sign in</button>
     </div>
   );
